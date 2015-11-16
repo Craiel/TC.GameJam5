@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="rpg_maker_tileset" tilewidth="32" tileheight="32" tilecount="2016">
+  <image source="rpg_maker_tileset.png" width="1024" height="2016"/>
+  <tile id="71">
+   <objectgroup draworder="index">
+    <object id="0" x="-0.375" y="-0.25" width="32.625" height="32.25"/>
+   </objectgroup>
+  </tile>
+  <tile id="1350">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="-0.125" width="31.75" height="32.125"/>
+   </objectgroup>
+  </tile>
+  <tile id="1351">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="-0.125" width="31.875" height="32.125"/>
+   </objectgroup>
+  </tile>
+  <tile id="1382">
+   <objectgroup draworder="index">
+    <object id="0" x="0.125" y="0.125" width="31.75" height="31.875"/>
+   </objectgroup>
+  </tile>
+  <tile id="1383">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32.125" height="32.25"/>
+   </objectgroup>
+  </tile>
+  <tile id="1413">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="32" height="32.125"/>
+   </objectgroup>
+  </tile>
+  <tile id="1445">
+   <objectgroup draworder="index">
+    <object id="0" x="-0.125" y="0" width="32" height="32"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzzYGBg8EDDzkRidH3o2J1MTE2zsJlJlhmMaJgE8wIZERidj4yJNa8QqDYIikH8IEbsmFjzJlLZPGzmgzADWnhSK27R45iQuhBG6ppHbfeNmjdq3lAxDwARYXD6
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBhewIkJO6bEPHdGIGZlYPAA4jZWBJsc8BZKpwP1ZwDxMlYEmxQAc8NbwkqJAjA3BDFS5j8QmMiIimFmg9iFQFwEpYkFgkwQvZMY8dPEgkCgeRuB6jcx4qeJAZ+B6r4AcQgRGAbckTA6EAa6TYQJYS4uGhngM88YaJYJE8JcXDQ2vdhAMFBtCBPCXFw0seahm4uLHghgDcQ2JIgTAtFAHEOCOCFQDcQ1JIgTArOBeA4J4iAAAJ7VNxI=
+  </data>
+ </layer>
+ <layer name="Tile Layer 3" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFQw0EMWJn08o8kBgp9sDUo+vDJU6OmdgwMeAzFnVKFIShFlBvCBXiABl8hppJCBMLhJkYGESYCNPEAmOgWhMmwjSxIBioNoSJMD0KBh8AAKewE0M=
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApIBwAGQAAB
+  </data>
+ </layer>
+</map>
