@@ -1,0 +1,1112 @@
+fileFormatVersion: 2
+guid: c1567d4ad554bb0448328b7abd76e7b4
+timeCreated: 1448152775
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: chara1_0
+    21300002: chara1_1
+    21300004: chara1_2
+    21300006: chara1_3
+    21300008: chara1_4
+    21300010: chara1_5
+    21300012: chara1_6
+    21300014: chara1_7
+    21300016: chara1_8
+    21300018: chara1_9
+    21300020: chara1_10
+    21300022: chara1_11
+    21300024: chara1_12
+    21300026: chara1_13
+    21300028: chara1_14
+    21300030: chara1_15
+    21300032: chara1_16
+    21300034: chara1_17
+    21300036: chara1_18
+    21300038: chara1_19
+    21300040: chara1_20
+    21300042: chara1_21
+    21300044: chara1_22
+    21300046: chara1_23
+    21300048: chara1_24
+    21300050: chara1_25
+    21300052: chara1_26
+    21300054: chara1_27
+    21300056: chara1_28
+    21300058: chara1_29
+    21300060: chara1_30
+    21300062: chara1_31
+    21300064: chara1_32
+    21300066: chara1_33
+    21300068: chara1_34
+    21300070: chara1_35
+    21300072: chara1_36
+    21300074: chara1_37
+    21300076: chara1_38
+    21300078: chara1_39
+    21300080: chara1_40
+    21300082: chara1_41
+    21300084: chara1_42
+    21300086: chara1_43
+    21300088: chara1_44
+    21300090: chara1_45
+    21300092: chara1_46
+    21300094: chara1_47
+    21300096: chara1_48
+    21300098: chara1_49
+    21300100: chara1_50
+    21300102: chara1_51
+    21300104: chara1_52
+    21300106: chara1_53
+    21300108: chara1_54
+    21300110: chara1_55
+    21300112: chara1_56
+    21300114: chara1_57
+    21300116: chara1_58
+    21300118: chara1_59
+    21300120: chara1_60
+    21300122: chara1_61
+    21300124: chara1_62
+    21300126: chara1_63
+    21300128: chara1_64
+    21300130: chara1_65
+    21300132: chara1_66
+    21300134: chara1_67
+    21300136: chara1_68
+    21300138: chara1_69
+    21300140: chara1_70
+    21300142: chara1_71
+    21300144: chara1_72
+    21300146: chara1_73
+    21300148: chara1_74
+    21300150: chara1_75
+    21300152: chara1_76
+    21300154: chara1_77
+    21300156: chara1_78
+    21300158: chara1_79
+    21300160: chara1_80
+    21300162: chara1_81
+    21300164: chara1_82
+    21300166: chara1_83
+    21300168: chara1_84
+    21300170: chara1_85
+    21300172: chara1_86
+    21300174: chara1_87
+    21300176: chara1_88
+    21300178: chara1_89
+    21300180: chara1_90
+    21300182: chara1_91
+    21300184: chara1_92
+    21300186: chara1_93
+    21300188: chara1_94
+    21300190: chara1_95
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: chara1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_6
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_7
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_8
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_9
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_10
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_11
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_13
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_14
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_15
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_17
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_18
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_19
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_20
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_21
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_22
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_23
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_25
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_26
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_27
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_28
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_29
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_30
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_31
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_32
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_33
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_34
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_35
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_37
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_38
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_39
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_40
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_41
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_42
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_43
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_44
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_45
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_46
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_47
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_49
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_50
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_51
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_52
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_53
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_54
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_55
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_56
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_57
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_58
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_59
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_61
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_62
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_63
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_64
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_65
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_66
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_67
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_68
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_69
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_70
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_71
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_73
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_74
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_75
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_76
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_77
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_78
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_79
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_80
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_81
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_82
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_83
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_85
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_86
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_87
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_88
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_89
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_90
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_91
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_92
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_93
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_94
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: chara1_95
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
