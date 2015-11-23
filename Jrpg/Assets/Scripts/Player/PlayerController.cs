@@ -25,11 +25,11 @@ namespace Assets.Scripts.Player
         private float updateTime;
         private enum  direction
         {
-            up,
-            down,
-            left,
-            right,
-            stay
+            Up,
+            Down,
+            Left,
+            Right,
+            Stay
         }
 
         public void Awake()
@@ -59,21 +59,21 @@ namespace Assets.Scripts.Player
                 //KeyCode key = (KeyCode)System.Enum.Parse(typeof(KeyCode), Input.inputString.ToUpper());
                 switch (dir)
                 {
-                    case direction.down:
+                    case direction.Down:
                         TargetTile.y = Mathf.Clamp(TargetTile.y + 1,0,currentMap.NumTilesHigh-1);
-                        PlayerAnimator.SetTrigger("down");
+                        PlayerAnimator.SetTrigger("Down");
                         break;
-                    case direction.up:
+                    case direction.Up:
                         TargetTile.y = Mathf.Clamp(TargetTile.y - 1,0,currentMap.NumTilesHigh-1);
-                        PlayerAnimator.SetTrigger("up");
+                        PlayerAnimator.SetTrigger("Up");
                         break;
-                    case direction.left:
+                    case direction.Left:
                         TargetTile.x = Mathf.Clamp(TargetTile.x - 1,0,currentMap.NumTilesWide-1);
-                        PlayerAnimator.SetTrigger("left");
+                        PlayerAnimator.SetTrigger("Left");
                         break;
-                    case direction.right:
+                    case direction.Right:
                         TargetTile.x = Mathf.Clamp(TargetTile.x + 1,0,currentMap.NumTilesWide-1);
-                        PlayerAnimator.SetTrigger("right");
+                        PlayerAnimator.SetTrigger("Right");
                         break;
                 }
             }
@@ -98,13 +98,13 @@ namespace Assets.Scripts.Player
                 switch (key)
                 {
                     case KeyCode.S:
-                        return direction.down;
+                        return direction.Down;
                     case KeyCode.W:
-                        return direction.up;
+                        return direction.Up;
                     case KeyCode.A:
-                        return direction.left;
+                        return direction.Left;
                     case KeyCode.D:
-                        return direction.right;
+                        return direction.Right;
                 }
             }
 
@@ -114,34 +114,34 @@ namespace Assets.Scripts.Player
                 pos = Camera.main.ScreenToWorldPoint(pos);
                 var xDiff = pos.x - CurrentTile.x * currentMap.TileWidth;
                 var yDiff = pos.y - CurrentTile.y * currentMap.TileHeight * -1;
-                if (Mathf.Abs(xDiff) > Mathf.Abs(yDiff)) //Moving left or right
+                if (Mathf.Abs(xDiff) > Mathf.Abs(yDiff)) //Moving Left or Right
                 {
                     if (xDiff > 0)
                     {
-                        return direction.right;
+                        return direction.Right;
                     }
                     else
                     {
-                        return direction.left;
+                        return direction.Left;
                     }
                     
                 }
-                else // Moving up or down
+                else // Moving Up or Down
                 {
                     if (yDiff > 0)
                     {
-                        return direction.up;
+                        return direction.Up;
                     }
                     else
                     {
-                        return direction.down;
+                        return direction.Down;
                     }
 
                 }
             }
             
 
-            return direction.stay;
+            return direction.Stay;
         }
     }
 }
