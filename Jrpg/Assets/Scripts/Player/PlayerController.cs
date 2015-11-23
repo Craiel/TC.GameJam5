@@ -17,8 +17,8 @@ namespace Assets.Scripts.Player
         public Vector2 TargetTile;
         [SerializeField]
         public float WaitTime;
-        [SerializeField]
-        public Animator PlayerAnimator;
+        
+        private Animator PlayerAnimator;
 
         private const int ZOffset = 0;
         private TiledMap currentMap;
@@ -42,6 +42,7 @@ namespace Assets.Scripts.Player
             var go = GameObject.Find("test");
             this.currentMap = go.GetComponent<TiledMap>();
             Camera.main.GetComponent<PlayerCamera>().target = this.transform;
+            this.PlayerAnimator = this.GetComponent<Animator>();
             this.Move(TargetTile);
         }
 
