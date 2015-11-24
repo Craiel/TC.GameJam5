@@ -9,7 +9,7 @@
 
     using UnityEngine;
     
-    public class GameInit : MonoBehaviour, IUnityLink
+    public class GameInit : MonoBehaviour
     {
         private IGame game;
 
@@ -34,9 +34,9 @@
 
             DontDestroyOnLoad(this);
             
-            this.game = Core.Factory.Resolve<IGame>();
+            /*this.game = Core.Factory.Resolve<IGame>();
             this.game.UnityLink = this;
-            this.game.Initialize();
+            this.game.Initialize();*/
         }
 
         [UsedImplicitly]

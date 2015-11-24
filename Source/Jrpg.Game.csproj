@@ -22,98 +22,32 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Unity|x64'">
+    <OutputPath>..\Jrpg\Assets\Core\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="UnityEditor">
-      <HintPath>..\..\CarbonCore\External\Unity\5.1.1f1\UnityEditor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>..\..\CarbonCore\External\Unity\5.1.1f1\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\CarbonCore\External\Unity\5.1.1f1\UnityEngine.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>..\..\CarbonCore\External\Unity\5.1.1f1\UnityEngine.Analytics.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>..\..\CarbonCore\External\Unity\5.1.1f1\UnityEngine.Networking.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\CarbonCore\External\Unity\5.1.1f1\UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="UnityJasonNet">
       <HintPath>..\..\CarbonCore\External\Json.NET\Unity\UnityJasonNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Constants.cs" />
-    <Compile Include="Contracts\Gameplay\IAbility.cs" />
-    <Compile Include="Contracts\Gameplay\ICombatSystems.cs" />
-    <Compile Include="Contracts\Gameplay\Modules\ICombatModule.cs" />
-    <Compile Include="Contracts\Gameplay\Modules\IMainMenuModule.cs" />
-    <Compile Include="Contracts\Logic\IGameModule.cs" />
-    <Compile Include="Contracts\Logic\IJsonAssetLoader.cs" />
-    <Compile Include="Contracts\Gameplay\ICoreSystems.cs" />
-    <Compile Include="Contracts\Gameplay\IEnemy.cs" />
-    <Compile Include="Contracts\Logic\IGameComponent.cs" />
-    <Compile Include="Contracts\Gameplay\IGameData.cs" />
-    <Compile Include="Contracts\Gameplay\IPlayer.cs" />
-    <Compile Include="Contracts\Logic\IStatDictionary.cs" />
-    <Compile Include="Contracts\Logic\IActor.cs" />
-    <Compile Include="Contracts\IGame.cs" />
-    <Compile Include="Contracts\IUnityLink.cs" />
-    <Compile Include="Core.cs" />
-    <Compile Include="Data\CoreData.cs" />
-    <Compile Include="Data\SaveData.cs" />
-    <Compile Include="Data\SaveDataActor.cs" />
-    <Compile Include="Data\SaveDataPlayer.cs" />
-    <Compile Include="Gameplay\Ability.cs" />
-    <Compile Include="Gameplay\CombatResult.cs" />
-    <Compile Include="Gameplay\CombatSystems.cs" />
-    <Compile Include="Gameplay\Enums\AbilityState.cs" />
-    <Compile Include="Gameplay\Enums\GameState.cs" />
-    <Compile Include="Gameplay\Modules\CombatModule.cs" />
-    <Compile Include="Gameplay\Modules\MainMenuModule.cs" />
-    <Compile Include="IoC\IoC.cs" />
-    <Compile Include="Logic\Actor.cs" />
-    <Compile Include="Logic\AssetLoader\JsonAssetLoader.cs" />
-    <Compile Include="Logic\AssetLoader\BaseAssetLoader.cs" />
-    <Compile Include="Gameplay\Enums\EnumLists.cs" />
-    <Compile Include="Gameplay\Enums\EventGainType.cs" />
-    <Compile Include="Gameplay\Enums\GainSourceEnum.cs" />
-    <Compile Include="Gameplay\Enums\StatEnum.cs" />
-    <Compile Include="Logic\Events\EventCombatResult.cs" />
-    <Compile Include="Logic\Events\EventDebugMessage.cs" />
-    <Compile Include="Logic\Events\EventGain.cs" />
-    <Compile Include="Logic\GameColor.cs" />
-    <Compile Include="Logic\GameColors.cs" />
-    <Compile Include="Logic\GameComponent.cs" />
-    <Compile Include="Gameplay\GameData.cs" />
-    <Compile Include="Gameplay\CoreSystems.cs" />
-    <Compile Include="Gameplay\Enemy.cs" />
-    <Compile Include="Gameplay\Player.cs" />
-    <Compile Include="Logic\GameModule.cs" />
-    <Compile Include="Logic\StatDictionary.cs" />
-    <Compile Include="Logic\IntervalTrigger.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="Logic\StatDictionaryExtensions.cs" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\..\CarbonCore\ContentServicesCompat\CarbonCore.ContentServices .Compat.csproj">
+      <Project>{890ff110-443f-4647-80b1-82d414cccd88}</Project>
+      <Name>CarbonCore.ContentServices .Compat</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\CarbonCore\UtilsCompat\CarbonCore.Utils.Compat.csproj">
       <Project>{b823cdce-5ed4-4030-ab35-44daf233d4c0}</Project>
       <Name>CarbonCore.Utils.Compat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CarbonCore\UtilsUnityEditor\CarbonCore.Utils.Unity.Editor.csproj">
+      <Project>{db147104-0c6f-4723-a86f-005ac742d4e6}</Project>
+      <Name>CarbonCore.Utils.Unity.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\CarbonCore\UtilsUnity\CarbonCore.Utils.Unity.csproj">
       <Project>{0ec48d10-8e81-4b43-a7ee-f4bd83516cea}</Project>
@@ -122,8 +56,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>del $(TargetDir)UnityEngine*
+del $(TargetDir)UnityEditor*
+del $(TargetDir)Jrpg.Game*</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

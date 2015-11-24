@@ -18,8 +18,4 @@
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 
-# Specific folders
-UnityProject/Assets/UnityVS*
-UnityProject/Builds*
-
 UnityVS*
