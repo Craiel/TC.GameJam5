@@ -58,7 +58,8 @@
   <PropertyGroup>
     <PostBuildEvent>del $(TargetDir)UnityEngine*
 del $(TargetDir)UnityEditor*
-del $(TargetDir)Jrpg.Game*</PostBuildEvent>
+del $(TargetDir)Jrpg.Game*
+move $(TargetDir)*.Editor.* $(TargetDir)\Editor</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
