@@ -68,6 +68,8 @@
 
         public SceneGameData DefaultSceneGameData { get; private set; }
 
+        public bool InTransition { get; private set; }
+
         public int Scenes
         {
             get
@@ -92,6 +94,7 @@
             this.transitionStep = SceneTransitionStep.Initialize;
             this.transitionTime = Diagnostic.BeginTimeMeasure();
             this.transitionData = data;
+            this.InTransition = true;
 
             if (this.ActiveSceneType == type)
             {
@@ -210,6 +213,8 @@
 
             // Hide the progress display
             this.progressDisplay.EndProgress();
+
+            this.InTransition = false;
 
             if (this.TransitionFinished != null)
             {
