@@ -3,6 +3,8 @@ using UnityEngine;
 
 namespace Assets.Scripts.Player
 {
+    using global::System;
+
     class PlayerController : MonoBehaviour
     {
 
@@ -95,7 +97,7 @@ namespace Assets.Scripts.Player
         {
             if (Input.inputString != "")
             {
-                KeyCode key = (KeyCode)System.Enum.Parse(typeof(KeyCode), Input.inputString.ToUpper());
+                KeyCode key = (KeyCode)Enum.Parse(typeof(KeyCode), Input.inputString.ToUpper());
                 switch (key)
                 {
                     case KeyCode.S:
