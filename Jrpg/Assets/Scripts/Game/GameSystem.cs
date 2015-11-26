@@ -5,6 +5,7 @@
     using Assets.Scripts.Game.Scenes;
     using Assets.Scripts.Systems;
     using Assets.Scripts.Systems.Contracts;
+    using Assets.Scripts.UI;
 
     using CarbonCore.Utils.Compat.Diagnostics;
     using CarbonCore.Utils.Compat.Diagnostics.Metrics;
@@ -33,7 +34,7 @@
                                     { GameSceneType.MainMenu, typeof(SceneMainMenu) },
                                     { GameSceneType.Indoor, typeof(SceneIndoor) },
                                     { GameSceneType.Outdoor, typeof(SceneOutdoor) },
-                                    { GameSceneType.Combat, typeof(SceneOutdoor) }
+                                    { GameSceneType.Combat, typeof(SceneCombat) }
                                 };
 
         private readonly IDictionary<GameSceneType, IGameScene> scenes;
@@ -44,7 +45,7 @@
         private MetricTime transitionTime;
         private object[] transitionData;
 
-        private GameProgressDisplay progressDisplay;
+        private GameUI gameUI;
 
         private IGameScene activeScene;
 
@@ -82,7 +83,7 @@
         {
             Diagnostic.Info("Starting GameSystem!");
 
-            this.progressDisplay = init.ProgressDisplay;
+            this.gameUI = init.UI;
 
             this.DefaultSceneGameData = init.SceneGameData;
         }
@@ -109,7 +110,6 @@
                 this.TransitionStarting(this.ActiveSceneType, type);
             }
 
-            this.progressDisplay.BeginProgress();
             this.LoadScene(type);
         }
 
@@ -127,18 +127,7 @@
                 this.UpdateSceneTransition();
             }
         }
-
-        public void RegisterProgressDisplay(GameProgressDisplay display)
-        {
-            if (this.progressDisplay != null && this.progressDisplay != display)
-            {
-                Diagnostic.Error("Progress display was already registered!");
-                return;
-            }
-
-            this.progressDisplay = display;
-        }
-
+        
         public T GetScene<T>()
             where T : IGameScene
         {
@@ -210,10 +199,7 @@
             this.transitioning = false;
             this.transitionTime = null;
             this.ActiveSceneType = this.activeScene.Type;
-
-            // Hide the progress display
-            this.progressDisplay.EndProgress();
-
+            
             this.InTransition = false;
 
             if (this.TransitionFinished != null)

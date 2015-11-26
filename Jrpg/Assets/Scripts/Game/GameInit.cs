@@ -2,6 +2,7 @@
 {
     using Assets.Scripts.Data;
     using Assets.Scripts.Enums;
+    using Assets.Scripts.UI;
 
     using UnityEngine;
 
@@ -19,7 +20,7 @@
         // Public
         // -------------------------------------------------------------------
         [SerializeField]
-        public GameProgressDisplay ProgressDisplay;
+        public GameUI UI;
 
         [SerializeField]
         public GameSceneType StartupScene;

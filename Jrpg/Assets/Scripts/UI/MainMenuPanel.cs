@@ -6,11 +6,19 @@
     using UnityEngine;
     using UnityEngine.UI;
 
-    public class MainMenuUI : MonoBehaviour
+    public class MainMenuPanel : BasePanel
     {
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
+        public override GameSceneType Type
+        {
+            get
+            {
+                return GameSceneType.MainMenu;
+            }
+        }
+
         [SerializeField]
         public Button StartGameButton;
 
@@ -21,6 +29,15 @@
         {
             this.StartGameButton.onClick.AddListener(this.OnStartGame);
             this.QuitGameButton.onClick.AddListener(this.OnQuitGame);
+        }
+
+        public void Update()
+        {
+            // Todo: use input controller
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                this.OnQuitGame();
+            }
         }
 
         // -------------------------------------------------------------------

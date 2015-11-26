@@ -6,13 +6,21 @@
     using UnityEngine;
 
     // Placeholder...
-    public class IntroUI : MonoBehaviour
+    public class IntroPanel : BasePanel
     {
         private float startupTime;
 
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
+        public override GameSceneType Type
+        {
+            get
+            {
+                return GameSceneType.Intro;
+            }
+        }
+
         public void Awake()
         {
             this.startupTime = Time.time;

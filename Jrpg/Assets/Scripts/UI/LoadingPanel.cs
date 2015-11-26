@@ -1,11 +1,15 @@
-﻿namespace Assets.Scripts.Game
+﻿namespace Assets.Scripts.UI
 {
+    using System;
+
+    using Assets.Scripts.Enums;
+
     using CarbonCore.Utils.Unity.Logic.Resource;
 
     using UnityEngine;
     using UnityEngine.UI;
 
-    public class GameProgressDisplay : MonoBehaviour
+    public class LoadingPanel : BasePanel
     {
         private const string LoadingDetailedTextFormat = "Loading {0} remaining\n{1} +{2}";
         private const string LoadingGenericTextFormat = "Loading ...";
@@ -15,8 +19,14 @@
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
-        [SerializeField]
-        public GameObject SmallDisplay;
+        public override GameSceneType Type
+        {
+            get
+            {
+                // Should never get queried
+                throw new InvalidOperationException();
+            }
+        }
 
         [SerializeField]
         public GameObject FullScreenDisplay;
@@ -32,43 +42,17 @@
 
         [SerializeField]
         public Text ProgressDetailText;
-
-        public void Awake()
-        {
-            DontDestroyOnLoad(this);
-
-            this.SmallDisplay.SetActive(false);
-            this.FullScreenDisplay.SetActive(false);
-        }
-
-        public void BeginProgress(bool small = false)
+        
+        public override void Show()
         {
             this.maxProgress = 0;
-
-            if (small)
-            {
-                this.SmallDisplay.SetActive(true);
-            }
-            else
-            {
-                this.FullScreenDisplay.SetActive(true);
-            }
+            
+            base.Show();
         }
-
-        public void EndProgress()
-        {
-            this.SmallDisplay.SetActive(false);
-            this.FullScreenDisplay.SetActive(false);
-        }
-
+        
         public void Update()
         {
-            float alpha = Mathf.PingPong(Time.time, 1.0f) * 1.1f;
-            alpha = Mathf.Clamp(alpha, 0.03f, 1.0f);
-
-            this.SmallDisplay.GetComponent<Image>().color = new Color(1, 1, 1, alpha);
-
-            bool showBackground = this.SmallDisplay.activeInHierarchy || this.FullScreenDisplay.activeInHierarchy;
+            bool showBackground = this.FullScreenDisplay.activeInHierarchy;
             this.Background.SetActive(showBackground);
 
             int pendingCount = ResourceProvider.Instance.PendingForLoad + ResourceProvider.Instance.RequestPool.ActiveRequestCount + BundleProvider.Instance.PendingForLoad;
