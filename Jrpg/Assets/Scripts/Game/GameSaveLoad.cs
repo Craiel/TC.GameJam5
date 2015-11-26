@@ -16,7 +16,7 @@
         public static void Save()
         {
             // Build the save object
-            SaveData targetData = new SaveData();
+            SaveData targetData = new SaveData { Version = Constants.Version };
 
             // Channel the save object through all the components to store the data
             foreach (GameComponent component in Components.Instance.GetComponents())

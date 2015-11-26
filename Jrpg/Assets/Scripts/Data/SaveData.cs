@@ -4,6 +4,8 @@
     
     using Newtonsoft.Json;
 
+    using UnityEngine;
+
     [JsonObject(MemberSerialization.OptOut)]
     public class SaveData
     {
@@ -18,6 +20,8 @@
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
+        public Vector2 Version { get; set; }
+
         public SaveDataPlayer Player { get; set; }
 
         public List<SaveDataCharacter> CharacterData { get; set; }

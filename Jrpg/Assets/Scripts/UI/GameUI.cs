@@ -1,5 +1,6 @@
 ﻿namespace Assets.Scripts.UI
 {
+    using System;
     using System.Collections;
     using System.Collections.Generic;
 
@@ -8,14 +9,18 @@
 
     using CarbonCore.Utils.Compat.Collections;
     using CarbonCore.Utils.Compat.Diagnostics;
+    using CarbonCore.Utils.Unity.Logic;
 
     using UnityEngine;
+    using UnityEngine.UI;
 
     public class GameUI : MonoBehaviour
     {
         private readonly ExtendedDictionary<GameSceneType, BasePanel> panelTypeMap;
 
         private BasePanel activePanel;
+
+        private IntervalTrigger fpsUpdateTrigger;
 
         // -------------------------------------------------------------------
         // Constructor
@@ -31,6 +36,12 @@
         // -------------------------------------------------------------------
         [SerializeField]
         public BasePanel LoadingPanel;
+
+        [SerializeField]
+        public Text VersionText;
+
+        [SerializeField]
+        public Text FpsText;
 
         [SerializeField]
         public BasePanel[] Panels;
@@ -51,10 +62,20 @@
             {
                 this.RegisterPanel(panel);
             }
+
+            this.VersionText.text = string.Format(
+                "{0} {1}.{2}",
+                Constants.GameName,
+                Constants.Version.x,
+                Constants.Version.y);
+
+            this.fpsUpdateTrigger = IntervalTrigger.Create(Constants.FpsUpdateInterval, this.UpdateFpsDisplay);
         }
 
         public void Update()
         {
+            this.fpsUpdateTrigger.Update(Time.time);
+
             if (GameSystem.Instance.InTransition)
             {
                 foreach (GameSceneType type in this.panelTypeMap.Keys)
@@ -114,6 +135,17 @@
             }
 
             this.panelTypeMap.Add(panel.Type, panel);
+        }
+
+        private void UpdateFpsDisplay(float currentTime, IntervalTrigger trigger)
+        {
+            float fps = 0;
+            if (Math.Abs(Time.deltaTime) > float.Epsilon)
+            {
+                fps = 1.0f / Time.deltaTime;
+            }
+
+            this.FpsText.text = string.Format(Constants.FpsFormat, fps);
         }
     }
 }
