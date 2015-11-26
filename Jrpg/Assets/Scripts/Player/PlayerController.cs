@@ -3,19 +3,15 @@ using UnityEngine;
 
 namespace Assets.Scripts.Player
 {
+    using Assets.Scripts.Game;
+
     using global::System;
 
     class PlayerController : MonoBehaviour
     {
-
-        PlayerController()
-        {
-            CurrentTile = new Vector2(0,0);
-        }
         /// <summary>
         /// Public
         /// </summary>
-        public Vector2 CurrentTile;
         public Vector2 TargetTile;
         [SerializeField]
         public float WaitTime;
@@ -36,21 +32,18 @@ namespace Assets.Scripts.Player
 
         public void Awake()
         {
-
-            this.CurrentTile.x = 6;
-            this.CurrentTile.y = 1;
-            this.TargetTile.x = 6;
-            this.TargetTile.y = 1;
             var go = GameObject.Find("test");
             this.currentMap = go.GetComponent<TiledMap>();
             Camera.main.GetComponent<PlayerCamera>().target = this.transform;
             this.PlayerAnimator = this.GetComponent<Animator>();
-            this.Move(TargetTile);
+
+            this.TargetTile = Components.Instance.Player.OutdoorPosition;
+            this.Move(this.TargetTile);
         }
 
         public void Update()
         {
-            if (CurrentTile != TargetTile)
+            if (Components.Instance.Player.OutdoorPosition != TargetTile)
             {
                 Move(TargetTile);
             }
@@ -89,8 +82,7 @@ namespace Assets.Scripts.Player
             int x = (int) tile.x * currentMap.TileWidth;
             transform.position = new Vector3(x,y,ZOffset);
             updateTime = Time.time + WaitTime;
-            CurrentTile = TargetTile;
-
+            Components.Instance.Player.OutdoorPosition = TargetTile;
         }
 
         private direction ProcessInput()
@@ -115,8 +107,8 @@ namespace Assets.Scripts.Player
             {
                 var pos = Input.mousePosition;
                 pos = Camera.main.ScreenToWorldPoint(pos);
-                var xDiff = pos.x - CurrentTile.x * currentMap.TileWidth;
-                var yDiff = pos.y - CurrentTile.y * currentMap.TileHeight * -1;
+                var xDiff = pos.x - Components.Instance.Player.OutdoorPosition.x * currentMap.TileWidth;
+                var yDiff = pos.y - Components.Instance.Player.OutdoorPosition.y * currentMap.TileHeight * -1;
                 if (Mathf.Abs(xDiff) > Mathf.Abs(yDiff)) //Moving Left or Right
                 {
                     if (xDiff > 0)

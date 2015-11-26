@@ -33,7 +33,7 @@
                 return;
             }
 
-            if (Time.time > this.startupTime + 5f)
+            if (Time.time > this.startupTime + 5f || Input.GetMouseButtonDown(0))
             {
                 GameSystem.Instance.Transition(GameSceneType.MainMenu);
             }

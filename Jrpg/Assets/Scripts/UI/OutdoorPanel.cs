@@ -41,6 +41,8 @@
         // -------------------------------------------------------------------
         private void OnQuit()
         {
+            GameSaveLoad.Save();
+
             GameSystem.Instance.Transition(GameSceneType.MainMenu);
         }
     }

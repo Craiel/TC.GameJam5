@@ -20,14 +20,18 @@
         }
 
         [SerializeField]
-        public Button StartGameButton;
+        public Button NewGameButton;
+
+        [SerializeField]
+        public Button LoadGameButton;
 
         [SerializeField]
         public Button QuitGameButton;
 
         public void Awake()
         {
-            this.StartGameButton.onClick.AddListener(this.OnStartGame);
+            this.NewGameButton.onClick.AddListener(this.OnNewGame);
+            this.LoadGameButton.onClick.AddListener(this.OnLoadGame);
             this.QuitGameButton.onClick.AddListener(this.OnQuitGame);
         }
 
@@ -43,8 +47,20 @@
         // -------------------------------------------------------------------
         // Private
         // -------------------------------------------------------------------
-        private void OnStartGame()
+        private void OnNewGame()
         {
+            // Reset all game data
+            GameSaveLoad.Reset();
+
+            // Transition to the default for a new game
+            GameSystem.Instance.Transition(GameSceneType.Outdoor);
+        }
+
+        private void OnLoadGame()
+        {
+            GameSaveLoad.Load();
+
+            // Todo: transition based on the load state
             GameSystem.Instance.Transition(GameSceneType.Outdoor);
         }
 
