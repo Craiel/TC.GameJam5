@@ -2,6 +2,7 @@
 {
     using Assets.Scripts.Enums;
     using Assets.Scripts.Game;
+    using Assets.Scripts.InputSystem;
 
     using UnityEngine;
     using UnityEngine.UI;
@@ -29,8 +30,7 @@
 
         public void Update()
         {
-            // Todo: use input controller
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (InputHandler.Instance.GetState(Controls.Exit).IsPressed)
             {
                 this.OnQuit();
             }

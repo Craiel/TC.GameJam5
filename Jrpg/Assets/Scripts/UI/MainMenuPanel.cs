@@ -1,7 +1,11 @@
 ﻿namespace Assets.Scripts.UI
 {
+    using Assets.Scripts.Data;
     using Assets.Scripts.Enums;
     using Assets.Scripts.Game;
+    using Assets.Scripts.InputSystem;
+
+    using CarbonCore.Utils.Unity.Logic.Resource;
 
     using UnityEngine;
     using UnityEngine.UI;
@@ -38,7 +42,7 @@
         public void Update()
         {
             // Todo: use input controller
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (InputHandler.Instance.GetState(Controls.Exit).IsPressed)
             {
                 this.OnQuitGame();
             }
@@ -49,6 +53,9 @@
         // -------------------------------------------------------------------
         private void OnNewGame()
         {
+            // Play the accept sound
+            Components.Instance.Audio.PlayOneShot(AssetResourceKeys.SfxAcceptAssetKey, GameAudioType.Sfx);
+
             // Reset all game data
             GameSaveLoad.Reset();
 
