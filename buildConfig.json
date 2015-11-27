@@ -1,0 +1,13 @@
+{
+  "Name": "Jrpg",
+  "Data": [
+    {
+      "Directory": "data\\",
+      "FilterStrings": [
+        "*.xlsx"
+      ]
+    }
+  ],
+  "DataTarget": "Jrpg\\Assets\\StreamingAssets\\GameData.json",
+  "TargetPlatform": "Unity"
+}
