@@ -13,10 +13,9 @@
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
-
         [SerializeField]
         public Button AttackButton;
-
+        
         [SerializeField]
         public Button MagicButton;
 
