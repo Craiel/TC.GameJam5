@@ -2,7 +2,10 @@
 {
     using Assets.Scripts.Enums;
 
-    public class CombatPanel : BasePanel
+    using UnityEngine;
+    using UnityEngine.UI;
+
+    public class CombatPanel : ScenePanel
     {
         // -------------------------------------------------------------------
         // Public

@@ -3,6 +3,7 @@
     using Assets.Scripts.Data;
     using Assets.Scripts.Enums;
     using Assets.Scripts.Game.Scenes;
+    using Assets.Scripts.InputSystem;
     using Assets.Scripts.Systems;
     using Assets.Scripts.Systems.Contracts;
     using Assets.Scripts.UI;
@@ -86,6 +87,10 @@
             this.gameUI = init.UI;
 
             this.DefaultSceneGameData = init.SceneGameData;
+
+            // Initialize all components
+            InputHandler.Instance.Initialize();
+            Components.Instance.Initialize();
         }
 
         public void Transition(GameSceneType type, params object[] data)
@@ -126,6 +131,8 @@
             {
                 this.UpdateSceneTransition();
             }
+
+            Components.Instance.Update();
         }
         
         public T GetScene<T>()

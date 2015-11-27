@@ -6,7 +6,7 @@
     using UnityEngine;
 
     // Placeholder...
-    public class IntroPanel : BasePanel
+    public class IntroPanel : ScenePanel
     {
         private float startupTime;
 
@@ -33,7 +33,7 @@
                 return;
             }
 
-            if (Time.time > this.startupTime + 5f)
+            if (Time.time > this.startupTime + 5f || Input.GetMouseButtonDown(0))
             {
                 GameSystem.Instance.Transition(GameSceneType.MainMenu);
             }

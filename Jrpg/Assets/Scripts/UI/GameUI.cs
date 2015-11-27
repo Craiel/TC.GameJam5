@@ -1,28 +1,31 @@
 ﻿namespace Assets.Scripts.UI
 {
-    using System.Collections;
-    using System.Collections.Generic;
+    using System;
 
     using Assets.Scripts.Enums;
     using Assets.Scripts.Game;
 
     using CarbonCore.Utils.Compat.Collections;
     using CarbonCore.Utils.Compat.Diagnostics;
+    using CarbonCore.Utils.Unity.Logic;
 
     using UnityEngine;
+    using UnityEngine.UI;
 
     public class GameUI : MonoBehaviour
     {
-        private readonly ExtendedDictionary<GameSceneType, BasePanel> panelTypeMap;
+        private readonly ExtendedDictionary<GameSceneType, ScenePanel> panelTypeMap;
 
-        private BasePanel activePanel;
+        private ScenePanel activePanel;
+
+        private IntervalTrigger fpsUpdateTrigger;
 
         // -------------------------------------------------------------------
         // Constructor
         // -------------------------------------------------------------------
         public GameUI()
         {
-            this.panelTypeMap = new ExtendedDictionary<GameSceneType, BasePanel>();
+            this.panelTypeMap = new ExtendedDictionary<GameSceneType, ScenePanel>();
             this.panelTypeMap.EnableReverseLookup = true;
         }
 
@@ -30,10 +33,16 @@
         // Public
         // -------------------------------------------------------------------
         [SerializeField]
-        public BasePanel LoadingPanel;
+        public ScenePanel LoadingPanel;
 
         [SerializeField]
-        public BasePanel[] Panels;
+        public Text VersionText;
+
+        [SerializeField]
+        public Text FpsText;
+
+        [SerializeField]
+        public ScenePanel[] Panels;
 
         public void Awake()
         {
@@ -47,14 +56,24 @@
                 return;
             }
 
-            foreach (BasePanel panel in this.Panels)
+            foreach (ScenePanel panel in this.Panels)
             {
                 this.RegisterPanel(panel);
             }
+
+            this.VersionText.text = string.Format(
+                "{0} {1}.{2}",
+                Constants.GameName,
+                Constants.Version.x,
+                Constants.Version.y);
+
+            this.fpsUpdateTrigger = IntervalTrigger.Create(Constants.FpsUpdateInterval, this.UpdateFpsDisplay);
         }
 
         public void Update()
         {
+            this.fpsUpdateTrigger.Update(Time.time);
+
             if (GameSystem.Instance.InTransition)
             {
                 foreach (GameSceneType type in this.panelTypeMap.Keys)
@@ -105,7 +124,7 @@
             return false;
         }
 
-        private void RegisterPanel(BasePanel panel)
+        private void RegisterPanel(ScenePanel panel)
         {
             if (this.panelTypeMap.ContainsKey(panel.Type))
             {
@@ -114,6 +133,17 @@
             }
 
             this.panelTypeMap.Add(panel.Type, panel);
+        }
+
+        private void UpdateFpsDisplay(float currentTime, IntervalTrigger trigger)
+        {
+            float fps = 0;
+            if (Math.Abs(Time.deltaTime) > float.Epsilon)
+            {
+                fps = 1.0f / Time.deltaTime;
+            }
+
+            this.FpsText.text = string.Format(Constants.FpsFormat, fps);
         }
     }
 }

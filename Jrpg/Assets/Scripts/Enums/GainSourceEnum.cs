@@ -1,10 +1,8 @@
-﻿namespace Jrpg.Game.Gameplay.Enums
+﻿namespace Assets.Scripts.Enums
 {
     public enum GainSourceEnum
     {
         Unknown,
-        Idle,
-        Enemy,
-        Experience
+        Enemy
     }
 }

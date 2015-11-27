@@ -2,11 +2,12 @@
 {
     using Assets.Scripts.Enums;
     using Assets.Scripts.Game;
+    using Assets.Scripts.InputSystem;
 
     using UnityEngine;
     using UnityEngine.UI;
 
-    public class OutdoorPanel : BasePanel
+    public class OutdoorPanel : ScenePanel
     {
         // -------------------------------------------------------------------
         // Public
@@ -29,8 +30,7 @@
 
         public void Update()
         {
-            // Todo: use input controller
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (InputHandler.Instance.GetState(Controls.Exit).IsPressed)
             {
                 this.OnQuit();
             }
@@ -41,6 +41,8 @@
         // -------------------------------------------------------------------
         private void OnQuit()
         {
+            GameSaveLoad.Save();
+
             GameSystem.Instance.Transition(GameSceneType.MainMenu);
         }
     }
