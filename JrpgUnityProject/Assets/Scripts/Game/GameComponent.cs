@@ -36,6 +36,11 @@
             this.IsInitialized = true;
         }
 
+        public virtual void Destroy()
+        {
+            this.IsInitialized = false;
+        }
+
         public virtual void Update()
         {
             if (!this.IsInitialized)
