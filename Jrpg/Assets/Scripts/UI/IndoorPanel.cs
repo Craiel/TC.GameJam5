@@ -7,7 +7,7 @@
     using UnityEngine;
     using UnityEngine.UI;
 
-    public class IndoorPanel : BasePanel
+    public class IndoorPanel : ScenePanel
     {
         // -------------------------------------------------------------------
         // Public

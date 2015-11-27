@@ -10,7 +10,7 @@
     using UnityEngine;
     using UnityEngine.UI;
 
-    public class MainMenuPanel : BasePanel
+    public class MainMenuPanel : ScenePanel
     {
         // -------------------------------------------------------------------
         // Public

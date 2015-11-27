@@ -9,15 +9,6 @@
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
-
-        public override GameSceneType Type
-        {
-            get
-            {
-                return GameSceneType.Combat;
-            }
-        }
-
         [SerializeField]
         public ItemButton ItemButton1;
 

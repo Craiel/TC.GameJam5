@@ -9,14 +9,6 @@
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
-
-        public override GameSceneType Type
-        {
-            get
-            {
-                return GameSceneType.Combat;
-            }
-        }
         [SerializeField]
         public SpellButton SpellButton1;
 

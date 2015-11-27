@@ -7,7 +7,7 @@
     using UnityEngine;
     using UnityEngine.UI;
 
-    public class OutdoorPanel : BasePanel
+    public class OutdoorPanel : ScenePanel
     {
         // -------------------------------------------------------------------
         // Public

@@ -9,7 +9,7 @@
     using UnityEngine;
     using UnityEngine.UI;
 
-    public class LoadingPanel : BasePanel
+    public class LoadingPanel : ScenePanel
     {
         private const string LoadingDetailedTextFormat = "Loading {0} remaining\n{1} +{2}";
         private const string LoadingGenericTextFormat = "Loading ...";

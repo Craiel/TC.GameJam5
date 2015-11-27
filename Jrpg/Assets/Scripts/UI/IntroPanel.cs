@@ -6,7 +6,7 @@
     using UnityEngine;
 
     // Placeholder...
-    public class IntroPanel : BasePanel
+    public class IntroPanel : ScenePanel
     {
         private float startupTime;
 

@@ -1,8 +1,6 @@
 ﻿namespace Assets.Scripts.UI
 {
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
 
     using Assets.Scripts.Enums;
     using Assets.Scripts.Game;
@@ -16,9 +14,9 @@
 
     public class GameUI : MonoBehaviour
     {
-        private readonly ExtendedDictionary<GameSceneType, BasePanel> panelTypeMap;
+        private readonly ExtendedDictionary<GameSceneType, ScenePanel> panelTypeMap;
 
-        private BasePanel activePanel;
+        private ScenePanel activePanel;
 
         private IntervalTrigger fpsUpdateTrigger;
 
@@ -27,7 +25,7 @@
         // -------------------------------------------------------------------
         public GameUI()
         {
-            this.panelTypeMap = new ExtendedDictionary<GameSceneType, BasePanel>();
+            this.panelTypeMap = new ExtendedDictionary<GameSceneType, ScenePanel>();
             this.panelTypeMap.EnableReverseLookup = true;
         }
 
@@ -35,7 +33,7 @@
         // Public
         // -------------------------------------------------------------------
         [SerializeField]
-        public BasePanel LoadingPanel;
+        public ScenePanel LoadingPanel;
 
         [SerializeField]
         public Text VersionText;
@@ -44,7 +42,7 @@
         public Text FpsText;
 
         [SerializeField]
-        public BasePanel[] Panels;
+        public ScenePanel[] Panels;
 
         public void Awake()
         {
@@ -58,7 +56,7 @@
                 return;
             }
 
-            foreach (BasePanel panel in this.Panels)
+            foreach (ScenePanel panel in this.Panels)
             {
                 this.RegisterPanel(panel);
             }
@@ -126,7 +124,7 @@
             return false;
         }
 
-        private void RegisterPanel(BasePanel panel)
+        private void RegisterPanel(ScenePanel panel)
         {
             if (this.panelTypeMap.ContainsKey(panel.Type))
             {
