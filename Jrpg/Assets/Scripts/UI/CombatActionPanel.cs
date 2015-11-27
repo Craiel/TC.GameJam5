@@ -3,15 +3,14 @@
     using UnityEngine;
     using UnityEngine.UI;
 
-    public class CombatAcionPanel : BasePanel
+    public class CombatActionPanel : BasePanel
     {
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
-
         [SerializeField]
         public Button AttackButton;
-
+        
         [SerializeField]
         public Button MagicButton;
 
@@ -32,7 +31,6 @@
 
         [SerializeField]
         public ItemPanel ItemPanel;
-
 
         public void Awake()
         {
