@@ -7,6 +7,8 @@
 
     using CarbonCore.Utils.Unity.Logic;
 
+    using UnityEngine;
+
     public abstract class GameComponent
     {
         private readonly IList<IntervalTrigger> intervals;
@@ -34,7 +36,7 @@
             this.IsInitialized = true;
         }
 
-        public virtual void Update(float currentTime)
+        public virtual void Update()
         {
             if (!this.IsInitialized)
             {
@@ -43,7 +45,7 @@
             
             foreach (IntervalTrigger trigger in this.intervals)
             {
-                trigger.Update(currentTime);
+                trigger.Update(Time.time);
             }
         }
 

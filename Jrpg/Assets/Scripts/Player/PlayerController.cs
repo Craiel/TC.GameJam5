@@ -1,11 +1,12 @@
 ﻿using Tiled2Unity;
-using UnityEngine;
-
 namespace Assets.Scripts.Player
 {
+    using Assets.Scripts.Data;
+    using Assets.Scripts.Enums;
     using Assets.Scripts.Game;
+    using Assets.Scripts.InputSystem;
 
-    using global::System;
+    using UnityEngine;
 
     class PlayerController : MonoBehaviour
     {
@@ -73,7 +74,6 @@ namespace Assets.Scripts.Player
                         break;
                 }
             }
-            
         }
 
         public void Move(Vector2 tile)
@@ -83,26 +83,31 @@ namespace Assets.Scripts.Player
             transform.position = new Vector3(x,y,ZOffset);
             updateTime = Time.time + WaitTime;
             Components.Instance.Player.OutdoorPosition = TargetTile;
+            Components.Instance.Audio.PlayOneShot(AssetResourceKeys.SfxFootstepsAssetKey, GameAudioType.Sfx);
         }
 
         private direction ProcessInput()
         {
-            if (Input.inputString != "")
+            if (InputHandler.Instance.GetState(Controls.MoveUp).IsPressed)
             {
-                KeyCode key = (KeyCode)Enum.Parse(typeof(KeyCode), Input.inputString.ToUpper());
-                switch (key)
-                {
-                    case KeyCode.S:
-                        return direction.Down;
-                    case KeyCode.W:
-                        return direction.Up;
-                    case KeyCode.A:
-                        return direction.Left;
-                    case KeyCode.D:
-                        return direction.Right;
-                }
+                return direction.Up;
             }
 
+            if (InputHandler.Instance.GetState(Controls.MoveDown).IsPressed)
+            {
+                return direction.Down;
+            }
+
+            if (InputHandler.Instance.GetState(Controls.MoveLeft).IsPressed)
+            {
+                return direction.Left;
+            }
+
+            if (InputHandler.Instance.GetState(Controls.MoveRight).IsPressed)
+            {
+                return direction.Right;
+            }
+            
             if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
             {
                 var pos = Input.mousePosition;

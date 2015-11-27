@@ -1,7 +1,10 @@
 ﻿namespace Assets.Scripts.Game.Scenes
 {
+    using Assets.Scripts.Data;
     using Assets.Scripts.Enums;
     using Assets.Scripts.Systems;
+
+    using CarbonCore.Utils.Unity.Logic.Resource;
 
     public class SceneMainMenu : GameScene
     {
@@ -22,6 +25,16 @@
             {
                 return GameSceneType.MainMenu;
             }
+        }
+
+        // -------------------------------------------------------------------
+        // Protected
+        // -------------------------------------------------------------------
+        protected override bool SceneRegisterResources1()
+        {
+            ResourceProvider.Instance.RegisterResource(AssetResourceKeys.SfxAcceptAssetKey);
+
+            return base.SceneRegisterResources1();
         }
     }
 }
