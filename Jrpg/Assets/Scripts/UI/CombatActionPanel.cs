@@ -1,10 +1,15 @@
 ﻿namespace Assets.Scripts.UI
 {
+
     using UnityEngine;
+
+    using System.Collections;
+
     using UnityEngine.UI;
 
-    public class CombatAcionPanel : BasePanel
+    public class CombatActionPanel : BasePanel
     {
+
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
@@ -32,7 +37,6 @@
 
         [SerializeField]
         public ItemPanel ItemPanel;
-
 
         public void Awake()
         {
