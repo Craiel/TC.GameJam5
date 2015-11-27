@@ -20,16 +20,16 @@
         }
 
         [SerializeField]
-        public Button AttackButton1;
+        public AttackButton AttackButton1;
 
         [SerializeField]
-        public Button AttackButton2;
+        public AttackButton AttackButton2;
 
         [SerializeField]
-        public Button AttackButton3;
+        public AttackButton AttackButton3;
 
         [SerializeField]
-        public Button AttackButton4;
+        public AttackButton AttackButton4;
 
     }
 }
