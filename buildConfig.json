@@ -8,6 +8,6 @@
       ]
     }
   ],
-  "DataTarget": "Jrpg\\Assets\\StreamingAssets\\GameData.json",
+  "DataTarget": "JrpgUnityProject\\Assets\\StreamingAssets\\GameData.json",
   "TargetPlatform": "Unity"
 }

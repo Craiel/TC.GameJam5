@@ -35,6 +35,8 @@
             ResourceProvider.Instance.RegisterResource(AssetResourceKeys.MusicOverworldAssetKey);
 
             ResourceProvider.Instance.RegisterResource(AssetResourceKeys.SfxFootstepsAssetKey);
+
+            ResourceProvider.Instance.RegisterResource(AssetResourceKeys.MapOverworldTest);
             
             return base.SceneRegisterResources1();
         }
