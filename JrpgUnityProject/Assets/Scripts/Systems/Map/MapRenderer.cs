@@ -30,7 +30,7 @@
             this.tileRegistry = tileRegistry;
 
             // Todo: get the size from data
-            this.target = new Texture2D(layer.SizeInPixel.X, layer.SizeInPixel.Y, TextureFormat.RGBA32, false);
+            this.target = new Texture2D(layer.SizeInPixel.X, layer.SizeInPixel.Y, TextureFormat.ARGB32, false);
 
             this.needUpdate = true;
         }
@@ -102,18 +102,19 @@
                 }
             }
 
+            // Apply the pixel changes
+            this.target.Apply();
+
             /*byte[] pngData = this.target.EncodeToPNG();
             var file = new CarbonFile(string.Format("TEST_{0}.png", this.layer.Name));
             using (var stream = file.OpenWrite())
             {
                 stream.Write(pngData, 0, pngData.Length);
             }*/
-            var temp = new Texture2D(this.target.width, this.target.height, TextureFormat.RGBA32, false);
-            temp.LoadImage(this.target.EncodeToPNG());
 
             Sprite sprite = Sprite.Create(
-                temp,
-                new Rect(0, 0, temp.width, temp.height),
+                this.target,
+                new Rect(0, 0, this.target.width, this.target.height),
                 new Vector2(0, 1),
                 100);
             sprite.name = this.layer.Name;
