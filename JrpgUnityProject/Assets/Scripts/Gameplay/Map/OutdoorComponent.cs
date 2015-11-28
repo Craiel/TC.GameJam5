@@ -4,11 +4,16 @@
     using Assets.Scripts.Enums;
     using Assets.Scripts.Game;
     using Assets.Scripts.Systems;
+    using Assets.Scripts.Systems.Map;
 
-    using CarbonCore.Utils.Compat.Diagnostics;
+    using CarbonCore.Utils.Unity.Logic.Resource;
+
+    using UnityEngine;
 
     public class OutdoorComponent : BaseMapComponent
     {
+        private bool initiateMusicUpdate;
+
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
@@ -16,12 +21,17 @@
         {
             base.Initialize();
 
-            GameMap test = GameMap.Load(AssetResourceKeys.MapOverworldTest);
-            Diagnostic.Info("Loaded map {0}", test.Name);
+            using (var resource = ResourceProvider.Instance.AcquireResource<GameObject>(AssetResourceKeys.OutdoorMapDisplayAssetKey))
+            {
+                GameObject instance = Object.Instantiate(resource.Data);
+                this.SetDisplay(instance.GetComponent<MapDisplayBehavior>());
+                SceneController.Instance.RegisterObjectAsRoot(SceneRootCategory.Dynamic, instance, false);
+            }
 
-            // Play the overworld music
-            // Todo: move to update cycle instead of initialize
-            Components.Instance.Audio.BeginPlay(AssetResourceKeys.MusicOverworldAssetKey, GameAudioType.Music);
+            // Todo: fetch from current data instead of hardcoded
+            this.SetMap(AssetResourceKeys.MapOutdoorTestAssetKey);
+
+            this.initiateMusicUpdate = true;
         }
 
         public override void Destroy()
@@ -30,6 +40,19 @@
             Components.Instance.Audio.Stop();
 
             base.Destroy();
+        }
+
+        public override void Update()
+        {
+            base.Update();
+
+            // todo
+            if (this.initiateMusicUpdate)
+            {
+                // Todo: play according to map / position
+                Components.Instance.Audio.BeginPlay(AssetResourceKeys.MusicOverworldAssetKey, GameAudioType.Music, true);
+                this.initiateMusicUpdate = false;
+            }
         }
     }
 }

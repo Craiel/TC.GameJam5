@@ -36,10 +36,9 @@
         protected override bool SceneRegisterResources1()
         {
             ResourceProvider.Instance.RegisterResource(AssetResourceKeys.MusicOverworldAssetKey);
-
             ResourceProvider.Instance.RegisterResource(AssetResourceKeys.SfxFootstepsAssetKey);
-
-            ResourceProvider.Instance.RegisterResource(AssetResourceKeys.MapOverworldTest);
+            ResourceProvider.Instance.RegisterResource(AssetResourceKeys.MapOutdoorTestAssetKey);
+            ResourceProvider.Instance.RegisterResource(AssetResourceKeys.OutdoorMapDisplayAssetKey);
             
             return base.SceneRegisterResources1();
         }

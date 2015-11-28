@@ -1,5 +1,7 @@
 ﻿namespace Assets.Scripts
 {
+    using CarbonCore.Utils.Unity.Data;
+
     using UnityEngine;
 
     public static class Constants
@@ -18,6 +20,15 @@
 
         public const string FpsFormat = "{0:#0} Fps";
 
+        public const string FolderTileSetRoot = "Tilesets";
+
+        public const string LayerSpecialCollision = "Collision";
+
         public static readonly Vector2 Version = new Vector2(0, 1);
+
+        public static ResourceKey GetTilesetResourceKey(string name)
+        {
+            return ResourceKey.Create<Texture2D>(FolderTileSetRoot + '/' + name);
+        }
     }
 }

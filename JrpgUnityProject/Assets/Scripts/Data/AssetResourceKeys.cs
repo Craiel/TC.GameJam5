@@ -13,6 +13,8 @@
         public static readonly ResourceKey SfxAcceptAssetKey = ResourceKey.Create<AudioClip>("Sound/Effects/Accept");
         public static readonly ResourceKey SfxFootstepsAssetKey = ResourceKey.Create<AudioClip>("Sound/Effects/Footsteps");
 
-        public static readonly ResourceKey MapOverworldTest = ResourceKey.Create<TextAsset>("MapData/Start");
+        public static readonly ResourceKey MapOutdoorTestAssetKey = ResourceKey.Create<TextAsset>("MapData/Start");
+
+        public static readonly ResourceKey OutdoorMapDisplayAssetKey = ResourceKey.Create<GameObject>("Outdoor/MapDisplay");
     }
 }

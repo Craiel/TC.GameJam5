@@ -11,6 +11,8 @@
     {
         private readonly IList<GameComponent> dynamicComponents;
 
+        private bool isInitialized;
+
         // -------------------------------------------------------------------
         // Constructor
         // -------------------------------------------------------------------
@@ -34,12 +36,24 @@
         {
             this.Audio.Initialize();
             this.Player.Initialize();
+
+            this.isInitialized = true;
         }
 
         public void Update()
         {
+            if (!this.isInitialized)
+            {
+                return;
+            }
+
             this.Audio.Update();
             this.Player.Update();
+
+            foreach (GameComponent component in this.dynamicComponents)
+            {
+                component.Update();
+            }
         }
 
         public IList<GameComponent> GetComponents()
@@ -48,6 +62,21 @@
             result.Add(this.Audio);
             result.Add(this.Player);
             return result;
+        }
+
+        public T GetComponent<T>()
+            where T : GameComponent
+        {
+            // TODO: this is slow and needs refactoring
+            foreach (GameComponent component in this.GetComponents())
+            {
+                if (component.GetType() == typeof(T))
+                {
+                    return component as T;
+                }
+            }
+
+            return default(T);
         }
 
         public void RegisterComponent(GameComponent component)
