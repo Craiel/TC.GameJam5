@@ -2,7 +2,7 @@
   "Name": "Jrpg",
   "Data": [
     {
-      "Directory": "data\\",
+      "Directory": "data\\xls\\",
       "FilterStrings": [
         "*.xlsx"
       ]
