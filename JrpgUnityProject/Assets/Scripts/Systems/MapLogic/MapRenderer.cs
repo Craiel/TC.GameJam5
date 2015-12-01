@@ -1,6 +1,5 @@
 ﻿namespace Assets.Scripts.Systems.MapLogic
 {
-    using CarbonCore.Utils.Compat.Diagnostics;
     using CarbonCore.Utils.Unity.Data;
 
     using UnityEngine;
@@ -28,7 +27,7 @@
             {
                 while (y < size.Y)
                 {
-                    int dataOffset = ((offset.Y + y) * layer.Size.Y + x + offset.X;
+                    int dataOffset = ((offset.Y + y) * layer.Size.Y) + x + offset.X;
                     var id = layer.Data[dataOffset];
                     if (id > 0)
                     {
