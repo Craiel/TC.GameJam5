@@ -1,12 +1,10 @@
 ﻿namespace Assets.Scripts.Systems.MapLogic
 {
     using System;
-    using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
 
     using Assets.Scripts.Game;
-    using Assets.Scripts.Systems.Map;
 
     using CarbonCore.ContentServices.Compat.Logic.Enums;
     using CarbonCore.Utils.Compat.Diagnostics;
@@ -34,7 +32,7 @@
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
-        public Vector2US MapSize
+        public Vector2I MapSize
         {
             get
             {
@@ -42,7 +40,7 @@
             }
         }
 
-        public Vector2US MapTileSize
+        public Vector2I MapTileSize
         {
             get
             {

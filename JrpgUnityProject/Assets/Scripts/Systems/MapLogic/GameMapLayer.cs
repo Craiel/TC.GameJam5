@@ -11,11 +11,11 @@
         // -------------------------------------------------------------------
         // Constructor
         // -------------------------------------------------------------------
-        public GameMapLayer(TiledMapLayerData data, Vector2US tileSize)
+        public GameMapLayer(TiledMapLayerData data, Vector2I tileSize)
         {
             this.data = data;
 
-            this.Size = new Vector2US(data.Width, data.Height);
+            this.Size = new Vector2I(data.Width, data.Height);
             this.TileSize = tileSize;
         }
 
@@ -38,9 +38,9 @@
             }
         }
 
-        public Vector2US Size { get; private set; }
+        public Vector2I Size { get; private set; }
 
-        public Vector2US TileSize { get; private set; }
+        public Vector2I TileSize { get; private set; }
 
         public ushort[] Data
         {
@@ -50,7 +50,7 @@
             }
         }
 
-        public static GameMapLayer Create(TiledMapLayerData source, Vector2US tileSize)
+        public static GameMapLayer Create(TiledMapLayerData source, Vector2I tileSize)
         {
             return new GameMapLayer(source, tileSize);
         }

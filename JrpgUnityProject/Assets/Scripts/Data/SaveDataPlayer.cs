@@ -21,14 +21,14 @@
         // -------------------------------------------------------------------
         public ulong Gold { get; set; }
 
-        [JsonConverter(typeof(Vector2USConverterSmall))]
-        public Vector2US OutdoorPosition { get; set; }
+        [JsonConverter(typeof(Vector2IConverterSmall))]
+        public Vector2I OutdoorPosition { get; set; }
 
         public void ResetToDefault()
         {
             this.Gold = 0;
 
-            this.OutdoorPosition = new Vector2US(6, 2);
+            this.OutdoorPosition = new Vector2I(6, 2);
         }
     }
 }

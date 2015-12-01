@@ -16,15 +16,15 @@ namespace Assets.Scripts.Player
         /// <summary>
         /// Public
         /// </summary>
-        public Vector2US TargetTile;
+        public Vector2I TargetTile;
         [SerializeField]
         public float WaitTime;
         
         private Animator PlayerAnimator;
 
         private bool initialized;
-        private Vector2US mapSize;
-        private Vector2US mapTileSize;
+        private Vector2I mapSize;
+        private Vector2I mapTileSize;
         private const int ZOffset = 0;
         private float updateTime;
         private enum  direction
@@ -72,26 +72,26 @@ namespace Assets.Scripts.Player
                 switch (dir)
                 {
                     case direction.Down:
-                        TargetTile = new Vector2US(this.TargetTile.X, (ushort)Mathf.Clamp(TargetTile.Y - 1,0, this.mapSize.Y - 1));
+                        TargetTile = new Vector2I(this.TargetTile.X, Mathf.Clamp(TargetTile.Y - 1, 0, this.mapSize.Y - 1));
                         PlayerAnimator.SetTrigger("Down");
                         break;
                     case direction.Up:
-                        TargetTile = new Vector2US(this.TargetTile.X, (ushort)Mathf.Clamp(TargetTile.Y + 1, 0, this.mapSize.Y - 1));
+                        TargetTile = new Vector2I(this.TargetTile.X, Mathf.Clamp(TargetTile.Y + 1, 0, this.mapSize.Y - 1));
                         PlayerAnimator.SetTrigger("Up");
                         break;
                     case direction.Left:
-                        TargetTile = new Vector2US((ushort)Mathf.Clamp(TargetTile.X - 1, 0, this.mapSize.X - 1), this.TargetTile.Y);
+                        TargetTile = new Vector2I(Mathf.Clamp(TargetTile.X - 1, 0, this.mapSize.X - 1), this.TargetTile.Y);
                         PlayerAnimator.SetTrigger("Left");
                         break;
                     case direction.Right:
-                        TargetTile = new Vector2US((ushort)Mathf.Clamp(TargetTile.X + 1, 0, this.mapSize.X - 1), this.TargetTile.Y);
+                        TargetTile = new Vector2I(Mathf.Clamp(TargetTile.X + 1, 0, this.mapSize.X - 1), this.TargetTile.Y);
                         PlayerAnimator.SetTrigger("Right");
                         break;
                 }
             }
         }
 
-        public void Move(Vector2US tile)
+        public void Move(Vector2I tile)
         {
             int y = tile.Y * this.mapTileSize.Y;
             int x = tile.X * this.mapTileSize.X;

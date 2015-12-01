@@ -23,7 +23,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Unity|x64'">
-    <OutputPath>..\JrpgUnityProject\Assets\Core\</OutputPath>
+    <OutputPath>JrpgUnityProject\Assets\Core\</OutputPath>
     <DefineConstants>TRACE;DEBUG</DefineConstants>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -37,19 +37,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CarbonCore\ContentServicesCompat\CarbonCore.ContentServices .Compat.csproj">
+    <ProjectReference Include="..\CarbonCore\ContentServicesCompat\CarbonCore.ContentServices .Compat.csproj">
       <Project>{890ff110-443f-4647-80b1-82d414cccd88}</Project>
       <Name>CarbonCore.ContentServices .Compat</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\CarbonCore\UtilsCompat\CarbonCore.Utils.Compat.csproj">
+    <ProjectReference Include="..\CarbonCore\UtilsCompat\CarbonCore.Utils.Compat.csproj">
       <Project>{b823cdce-5ed4-4030-ab35-44daf233d4c0}</Project>
       <Name>CarbonCore.Utils.Compat</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\CarbonCore\UtilsUnityEditor\CarbonCore.Utils.Unity.Editor.csproj">
+    <ProjectReference Include="..\CarbonCore\UtilsUnityEditor\CarbonCore.Utils.Unity.Editor.csproj">
       <Project>{db147104-0c6f-4723-a86f-005ac742d4e6}</Project>
       <Name>CarbonCore.Utils.Unity.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\CarbonCore\UtilsUnity\CarbonCore.Utils.Unity.csproj">
+    <ProjectReference Include="..\CarbonCore\UtilsUnity\CarbonCore.Utils.Unity.csproj">
       <Project>{0ec48d10-8e81-4b43-a7ee-f4bd83516cea}</Project>
       <Name>CarbonCore.Utils.Unity</Name>
     </ProjectReference>

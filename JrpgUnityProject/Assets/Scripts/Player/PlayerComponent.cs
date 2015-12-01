@@ -4,9 +4,7 @@
     using Assets.Scripts.Game;
 
     using CarbonCore.Utils.Unity.Data;
-
-    using UnityEngine;
-
+    
     public class PlayerComponent : GameComponent
     {
         // -------------------------------------------------------------------
@@ -14,13 +12,13 @@
         // -------------------------------------------------------------------
         public PlayerComponent()
         {
-            this.OutdoorPosition = Vector2US.Zero;
+            this.OutdoorPosition = Vector2I.Zero;
         }
 
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
-        public Vector2US OutdoorPosition { get; set; }
+        public Vector2I OutdoorPosition { get; set; }
 
         public ulong Gold { get; set; }
 

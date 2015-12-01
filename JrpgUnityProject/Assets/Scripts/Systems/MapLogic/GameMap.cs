@@ -2,8 +2,6 @@ namespace Assets.Scripts.Systems.MapLogic
 {
     using System.Collections.Generic;
 
-    using Assets.Scripts.Systems.Map;
-
     using CarbonCore.ContentServices.Compat.Data.Tiled;
     using CarbonCore.Utils.Compat.Json;
     using CarbonCore.Utils.Unity.Data;
@@ -25,8 +23,8 @@ namespace Assets.Scripts.Systems.MapLogic
             this.ResourceKey = resourceKey;
             this.Name = resourceKey.Path;
 
-            this.Size = new Vector2US(data.Width, data.Height);
-            this.TileSize = new Vector2US(data.TileWidth, data.TileHeight);
+            this.Size = new Vector2I(data.Width, data.Height);
+            this.TileSize = new Vector2I(data.TileWidth, data.TileHeight);
 
             // Create the layer data
             this.Layers = new List<GameMapLayer>();
@@ -50,9 +48,9 @@ namespace Assets.Scripts.Systems.MapLogic
 
         public string Name { get; private set; }
 
-        public Vector2US Size { get; private set; }
+        public Vector2I Size { get; private set; }
 
-        public Vector2US TileSize { get; private set; }
+        public Vector2I TileSize { get; private set; }
 
         public IList<GameMapLayer> Layers { get; private set; }
 

@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Systems.Map
+﻿namespace Assets.Scripts.Systems.MapLogic
 {
     using CarbonCore.ContentServices.Compat.Data.Tiled;
     using CarbonCore.Utils.Unity.Data;
@@ -17,8 +17,8 @@
         {
             this.data = data;
 
-            this.Size = new Vector2US(data.ImageWidth, data.ImageHeight);
-            this.TileSize = new Vector2US(data.TileWidth, data.TileHeight);
+            this.Size = new Vector2I(data.ImageWidth, data.ImageHeight);
+            this.TileSize = new Vector2I(data.TileWidth, data.TileHeight);
 
             this.TilesPerColumn = (ushort)(data.ImageHeight / data.TileHeight);
             this.TilesPerRow = (ushort)(data.ImageWidth / data.TileWidth);
@@ -42,9 +42,9 @@
 
         public Texture2D Texture { get; private set; }
 
-        public Vector2US Size { get; private set; }
+        public Vector2I Size { get; private set; }
 
-        public Vector2US TileSize { get; private set; }
+        public Vector2I TileSize { get; private set; }
 
         public ushort TilesPerRow { get; private set; }
 

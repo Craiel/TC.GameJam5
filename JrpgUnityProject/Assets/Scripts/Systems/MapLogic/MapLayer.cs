@@ -38,9 +38,9 @@
 
             // Destroy just in case
             this.DestroyChunks();
-            ushort x = 0;
-            ushort y = 0;
-            ushort reverseOffset = (ushort)(((layerData.Size.Y - 1) * layerData.TileSize.Y) / Constants.DefaultMapUnit);
+            int x = 0;
+            int y = 0;
+            int reverseOffset = (int)(((layerData.Size.Y - 1) * layerData.TileSize.Y) / Constants.DefaultMapUnit);
             while (x < layerData.Size.X)
             {
                 while (y < layerData.Size.Y)
@@ -53,7 +53,7 @@
                     chunkObject.transform.localScale = new Vector3(1, 1, 1);
 
                     var chunkInstance = chunkObject.AddComponent<MapChunk>();
-                    chunkInstance.Initialize(this.layer, new Vector2US(x, y), new Vector2US(this.chunkSize, this.chunkSize), this.tileRegistry);
+                    chunkInstance.Initialize(this.layer, new Vector2I(x, y), new Vector2I(this.chunkSize, this.chunkSize), this.tileRegistry);
                     
                     this.chunks.Add(chunkInstance);
                     y += this.chunkSize;

@@ -1,16 +1,13 @@
 ﻿namespace Assets.Scripts.Systems.MapLogic
 {
-    using System;
     using System.Collections.Generic;
-
-    using Assets.Scripts.Systems.Map;
 
     using CarbonCore.Utils.Unity.Data;
     
     public class MapTileRegistry
     {
-        private readonly IDictionary<ushort, GameTileSet> tilesetLookup;
-        private readonly IDictionary<ushort, ushort> tileIndexLookup;
+        private readonly IDictionary<int, GameTileSet> tilesetLookup;
+        private readonly IDictionary<int, int> tileIndexLookup;
 
         private ushort nextTileId;
 
@@ -19,8 +16,8 @@
         // -------------------------------------------------------------------
         public MapTileRegistry()
         {
-            this.tilesetLookup = new Dictionary<ushort, GameTileSet>();
-            this.tileIndexLookup = new Dictionary<ushort, ushort>();
+            this.tilesetLookup = new Dictionary<int, GameTileSet>();
+            this.tileIndexLookup = new Dictionary<int, int>();
         }
          
         // -------------------------------------------------------------------
@@ -32,7 +29,7 @@
             for (var i = 0; i < tileset.TileCount; i++)
             {
                 this.tilesetLookup.Add(this.nextTileId, tileset);
-                this.tileIndexLookup.Add(this.nextTileId, (ushort)i);
+                this.tileIndexLookup.Add(this.nextTileId, i);
                 this.nextTileId++;
             }
         }
@@ -43,11 +40,11 @@
             this.nextTileId = 0;
         }
 
-        public GameTileSet GetTile(ushort id, out Vector2US tileOffset)
+        public GameTileSet GetTile(int id, out Vector2I tileOffset)
         {
             // Given a id which is global to the registry we will find the right tileset
             // and then calculate the offset and size of the tile in question
-            tileOffset = Vector2US.Zero;
+            tileOffset = Vector2I.Zero;
 
             if (!this.tilesetLookup.ContainsKey(id))
             {
@@ -55,15 +52,15 @@
             }
 
             GameTileSet result = this.tilesetLookup[id];
-            ushort tileIndex = this.tileIndexLookup[id];
+            int tileIndex = this.tileIndexLookup[id];
             
-            ushort row = (ushort)(tileIndex / result.TilesPerRow);
-            ushort column = (ushort)(tileIndex - (row * result.TilesPerRow));
+            int row = tileIndex / result.TilesPerRow;
+            int column = tileIndex - (row * result.TilesPerRow);
 
             // We have to invert the row since it seems to load the texture upside down
-            row = (ushort)(result.TilesPerColumn - row - 1);
+            row = result.TilesPerColumn - row - 1;
 
-            tileOffset = new Vector2US((ushort)(column * result.TileSize.X), (ushort)(row * result.TileSize.Y));
+            tileOffset = new Vector2I(column * result.TileSize.X, row * result.TileSize.Y);
 
             return this.tilesetLookup[id];
         }

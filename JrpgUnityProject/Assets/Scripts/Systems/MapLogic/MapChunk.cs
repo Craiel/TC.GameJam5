@@ -21,15 +21,15 @@
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
-        public Vector2US Offset { get; private set; }
-        public Vector2US WorldOffset { get; private set; }
-        public Vector2US Size { get; private set; }
+        public Vector2I Offset { get; private set; }
+        public Vector2I WorldOffset { get; private set; }
+        public Vector2I Size { get; private set; }
 
-        public void Initialize(GameMapLayer layerData, Vector2US offset, Vector2US size, MapTileRegistry registry)
+        public void Initialize(GameMapLayer layerData, Vector2I offset, Vector2I size, MapTileRegistry registry)
         {
             this.layer = layerData;
             this.Offset = offset;
-            this.WorldOffset = new Vector2US(offset.X, (ushort)(layerData.Size.Y - offset.Y));
+            this.WorldOffset = new Vector2I(offset.X, layerData.Size.Y - offset.Y);
             this.Size = size;
             this.tileRegistry = registry;
         }
@@ -48,7 +48,7 @@
         public void Update()
         {
             // Todo: Refactor
-            if ((Components.Instance.Player.OutdoorPosition - this.WorldOffset).magnitude > Constants.DefaultChunkRange)
+            if ((Components.Instance.Player.OutdoorPosition - this.WorldOffset).Magnitude > Constants.DefaultChunkRange)
             {
                 this.Invalidate();
                 return;

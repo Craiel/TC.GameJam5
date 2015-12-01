@@ -1,7 +1,5 @@
 ﻿namespace Assets.Scripts.Systems.MapLogic
 {
-    using Assets.Scripts.Systems.Map;
-
     using CarbonCore.Utils.Compat.Diagnostics;
     using CarbonCore.Utils.Unity.Data;
 
@@ -12,30 +10,30 @@
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
-        public static Sprite RenderMap(GameMapLayer layer, Vector2US size, Vector2US offset, MapTileRegistry tileRegistry)
+        public static Sprite RenderMap(GameMapLayer layer, Vector2I size, Vector2I offset, MapTileRegistry tileRegistry)
         {
             // Make the buffer texture
-            ushort pixelWidth = (ushort)(size.X * layer.TileSize.X);
-            ushort pixelHeight = (ushort)(size.Y * layer.TileSize.Y);
+            int pixelWidth = size.X * layer.TileSize.X;
+            int pixelHeight = size.Y * layer.TileSize.Y;
 
             Texture2D buffer = new Texture2D(pixelWidth, pixelHeight, TextureFormat.ARGB32, false);
 
             ClearBuffer(buffer, Constants.MapClearColor);
 
             // Iterate over all data points
-            ushort x = 0;
-            ushort y = 0;
-            ushort reverseOffset = (ushort)((size.Y - 1) * layer.TileSize.Y);
+            int x = 0;
+            int y = 0;
+            int reverseOffset = (size.Y - 1) * layer.TileSize.Y;
             while (x < size.X)
             {
                 while (y < size.Y)
                 {
-                    ushort dataOffset = (ushort)(((offset.Y + y) * layer.Size.Y) + x + offset.X);
+                    int dataOffset = ((offset.Y + y) * layer.Size.Y + x + offset.X;
                     var id = layer.Data[dataOffset];
                     if (id > 0)
                     {
-                        Vector2US tileOffset;
-                        GameTileSet tileSet = tileRegistry.GetTile((ushort)(id - 1), out tileOffset);
+                        Vector2I tileOffset;
+                        GameTileSet tileSet = tileRegistry.GetTile(id - 1, out tileOffset);
 
                         // Blit the tile onto our texture
                         Color[] data = tileSet.Texture.GetPixels(
