@@ -7,6 +7,9 @@
 # Windows stuff
 Thumbs.db
 
+# IntelliJ / Webstorm stuff
+.idea
+
 # Visual studio stuff
 *.suo
 *.DotSettings.user
