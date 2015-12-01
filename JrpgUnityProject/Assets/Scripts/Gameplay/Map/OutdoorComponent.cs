@@ -4,7 +4,7 @@
     using Assets.Scripts.Enums;
     using Assets.Scripts.Game;
     using Assets.Scripts.Systems;
-    using Assets.Scripts.Systems.Map;
+    using Assets.Scripts.Systems.MapLogic;
 
     using CarbonCore.Utils.Unity.Logic.Resource;
 

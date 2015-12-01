@@ -1,10 +1,12 @@
-﻿namespace Assets.Scripts.Systems.Map
+﻿namespace Assets.Scripts.Systems.MapLogic
 {
     using System;
     using System.Collections;
     using System.Collections.Generic;
+    using System.Linq;
 
     using Assets.Scripts.Game;
+    using Assets.Scripts.Systems.Map;
 
     using CarbonCore.ContentServices.Compat.Logic.Enums;
     using CarbonCore.Utils.Compat.Diagnostics;
@@ -15,7 +17,7 @@
     // Generic component dealing with map navigation and handling
     public abstract class BaseMapComponent : GameComponent
     {
-        private readonly IList<MapRenderer> mapRenderers;
+        private readonly IList<MapLayer> layers;
 
         private MapTileRegistry tileRegistry;
 
@@ -26,7 +28,7 @@
         // -------------------------------------------------------------------
         protected BaseMapComponent()
         {
-            this.mapRenderers = new List<MapRenderer>();
+            this.layers = new List<MapLayer>();
         }
 
         // -------------------------------------------------------------------
@@ -63,13 +65,12 @@
 
             if (this.mapIsInvalid)
             {
-                this.RedrawMap();
-                this.mapIsInvalid = false;
-            }
+                foreach (MapLayer layer in this.layers)
+                {
+                    layer.Invalidate();
+                }
 
-            foreach (MapRenderer renderer in this.mapRenderers)
-            {
-                renderer.Update();
+                this.mapIsInvalid = false;
             }
         }
 
@@ -91,7 +92,7 @@
 
             // Clear out the display since we are changing the map
             this.tileRegistry.Clear();
-            this.mapRenderers.Clear();
+            this.layers.Clear();
             this.Display.Reset();
 
             // Load the new map
@@ -105,22 +106,24 @@
             }
 
             // Register the layers
-            foreach (GameMapLayer layer in this.Map.Layers)
+            foreach (GameMapLayer layerData in this.Map.Layers.Reverse())
             {
-                if (layer.Name.Equals(Constants.LayerSpecialCollision, StringComparison.OrdinalIgnoreCase))
+                if (layerData.Name.Equals(Constants.LayerSpecialCollision, StringComparison.OrdinalIgnoreCase))
                 {
                     // Todo: handle collision separate
                     continue;
                 }
 
-                switch (layer.Type)
+                switch (layerData.Type)
                 {
                     case TiledMapLayerType.TileLayer:
                         {
-                            // this is a tile layer, initialize a renderer for it and set all the required classes in place
-                            SpriteRenderer layerRenderer = this.Display.RegisterLayer(layer.Name);
-                            var mapRenderer = new MapRenderer(layer, layerRenderer, this.tileRegistry);
-                            this.mapRenderers.Add(mapRenderer);
+                            var layerObject = new GameObject(layerData.Name);
+                            var layerInstance = layerObject.AddComponent<MapLayer>();
+                            layerInstance.Initialize(layerData, this.tileRegistry, Constants.DefaultChunkSize);
+
+                            this.Display.RegisterLayer(layerObject, layerInstance);
+                            this.layers.Add(layerInstance);
                             break;
                         }
                 }
@@ -132,14 +135,6 @@
         protected void SetDisplay(MapDisplayBehavior display)
         {
             this.Display = display;
-        }
-
-        protected virtual void RedrawMap()
-        {
-            // Todo
-            // - change the display dimensions to the map rect we will display
-            // - refresh the image of the area we are showing
-            // - update the sprites of the display
         }
     }
 }

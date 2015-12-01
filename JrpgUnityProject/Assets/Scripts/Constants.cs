@@ -10,6 +10,12 @@
 
         public const float FpsUpdateInterval = 0.5f;
 
+        public const float DefaultMapUnit = 100.0f;
+
+        public const ushort DefaultChunkSize = 4;
+
+        public const ushort DefaultChunkRange = 5 * DefaultChunkSize;
+
         public const string GameName = "Unnamed Jrpg";
         
         public const string DataFile = "GameData.json";
@@ -23,6 +29,8 @@
         public const string FolderTileSetRoot = "Tilesets";
 
         public const string LayerSpecialCollision = "Collision";
+
+        public static readonly Color MapClearColor = new Color(0, 0, 0, 0);
 
         public static readonly Vector2 Version = new Vector2(0, 1);
 

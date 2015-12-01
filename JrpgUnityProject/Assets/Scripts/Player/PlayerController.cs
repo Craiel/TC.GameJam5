@@ -16,7 +16,7 @@ namespace Assets.Scripts.Player
         /// <summary>
         /// Public
         /// </summary>
-        public Vector2 TargetTile;
+        public Vector2US TargetTile;
         [SerializeField]
         public float WaitTime;
         
@@ -72,29 +72,29 @@ namespace Assets.Scripts.Player
                 switch (dir)
                 {
                     case direction.Down:
-                        TargetTile.y = Mathf.Clamp(TargetTile.y + 1,0, this.mapSize.Y - 1);
+                        TargetTile = new Vector2US(this.TargetTile.X, (ushort)Mathf.Clamp(TargetTile.Y - 1,0, this.mapSize.Y - 1));
                         PlayerAnimator.SetTrigger("Down");
                         break;
                     case direction.Up:
-                        TargetTile.y = Mathf.Clamp(TargetTile.y - 1,0, this.mapSize.Y - 1);
+                        TargetTile = new Vector2US(this.TargetTile.X, (ushort)Mathf.Clamp(TargetTile.Y + 1, 0, this.mapSize.Y - 1));
                         PlayerAnimator.SetTrigger("Up");
                         break;
                     case direction.Left:
-                        TargetTile.x = Mathf.Clamp(TargetTile.x - 1,0, this.mapSize.X - 1);
+                        TargetTile = new Vector2US((ushort)Mathf.Clamp(TargetTile.X - 1, 0, this.mapSize.X - 1), this.TargetTile.Y);
                         PlayerAnimator.SetTrigger("Left");
                         break;
                     case direction.Right:
-                        TargetTile.x = Mathf.Clamp(TargetTile.x + 1,0, this.mapSize.X - 1);
+                        TargetTile = new Vector2US((ushort)Mathf.Clamp(TargetTile.X + 1, 0, this.mapSize.X - 1), this.TargetTile.Y);
                         PlayerAnimator.SetTrigger("Right");
                         break;
                 }
             }
         }
 
-        public void Move(Vector2 tile)
+        public void Move(Vector2US tile)
         {
-            int y = (int) tile.y * this.mapTileSize.Y * -1;
-            int x = (int) tile.x * this.mapTileSize.X;
+            int y = tile.Y * this.mapTileSize.Y;
+            int x = tile.X * this.mapTileSize.X;
             transform.position = new Vector3(x,y,ZOffset);
             updateTime = Time.time + WaitTime;
             Components.Instance.Player.OutdoorPosition = TargetTile;
@@ -127,8 +127,8 @@ namespace Assets.Scripts.Player
             {
                 var pos = Input.mousePosition;
                 pos = Camera.main.ScreenToWorldPoint(pos);
-                var xDiff = pos.x - Components.Instance.Player.OutdoorPosition.x * this.mapTileSize.X;
-                var yDiff = pos.y - Components.Instance.Player.OutdoorPosition.y * this.mapTileSize.Y * -1;
+                var xDiff = pos.x - Components.Instance.Player.OutdoorPosition.X * this.mapTileSize.X;
+                var yDiff = pos.y - Components.Instance.Player.OutdoorPosition.Y * this.mapTileSize.Y;
                 if (Mathf.Abs(xDiff) > Mathf.Abs(yDiff)) //Moving Left or Right
                 {
                     if (xDiff > 0)

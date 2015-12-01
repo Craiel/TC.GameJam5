@@ -1,11 +1,10 @@
 ﻿namespace Assets.Scripts.Data
 {
+    using CarbonCore.Utils.Unity.Data;
     using CarbonCore.Utils.Unity.Logic.Json;
 
     using Newtonsoft.Json;
-
-    using UnityEngine;
-
+    
     [JsonObject(MemberSerialization.OptOut)]
     public class SaveDataPlayer
     {
@@ -22,14 +21,14 @@
         // -------------------------------------------------------------------
         public ulong Gold { get; set; }
 
-        [JsonConverter(typeof(Vector2ConverterSmall))]
-        public Vector2 OutdoorPosition { get; set; }
+        [JsonConverter(typeof(Vector2USConverterSmall))]
+        public Vector2US OutdoorPosition { get; set; }
 
         public void ResetToDefault()
         {
             this.Gold = 0;
 
-            this.OutdoorPosition = new Vector2(6, 2);
+            this.OutdoorPosition = new Vector2US(6, 2);
         }
     }
 }

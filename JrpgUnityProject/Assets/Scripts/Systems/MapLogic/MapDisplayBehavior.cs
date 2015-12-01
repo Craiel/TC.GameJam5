@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Systems.Map
+﻿namespace Assets.Scripts.Systems.MapLogic
 {
     using System.Collections.Generic;
 
@@ -19,14 +19,12 @@
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
-        public SpriteRenderer RegisterLayer(string layerName)
+        public void RegisterLayer(GameObject layerObject, MapLayer instance)
         {
-            var layerObject = new GameObject(layerName);
             layerObject.transform.SetParent(this.transform);
-
-            var layer = layerObject.AddComponent<SpriteRenderer>();
-            this.layers.Add(layerName, layerObject);
-            return layer;
+            layerObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            
+            this.layers.Add(layerObject.name, layerObject);
         }
 
         public void Reset()
@@ -37,6 +35,9 @@
             }
 
             this.layers.Clear();
+
+            this.transform.localScale = new Vector3(Constants.DefaultMapUnit, Constants.DefaultMapUnit, 1.0f);
+            this.transform.position = Vector3.zero;
         }
     }
 }

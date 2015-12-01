@@ -3,6 +3,8 @@
     using Assets.Scripts.Data;
     using Assets.Scripts.Game;
 
+    using CarbonCore.Utils.Unity.Data;
+
     using UnityEngine;
 
     public class PlayerComponent : GameComponent
@@ -12,13 +14,13 @@
         // -------------------------------------------------------------------
         public PlayerComponent()
         {
-            this.OutdoorPosition = Vector3.zero;
+            this.OutdoorPosition = Vector2US.Zero;
         }
 
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
-        public Vector2 OutdoorPosition { get; set; }
+        public Vector2US OutdoorPosition { get; set; }
 
         public ulong Gold { get; set; }
 

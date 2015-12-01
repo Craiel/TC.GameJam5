@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Systems.Map
+﻿namespace Assets.Scripts.Systems.MapLogic
 {
     using CarbonCore.ContentServices.Compat.Data.Tiled;
     using CarbonCore.ContentServices.Compat.Logic.Enums;
@@ -16,7 +16,6 @@
             this.data = data;
 
             this.Size = new Vector2US(data.Width, data.Height);
-            this.SizeInPixel = new Vector2US((ushort)(data.Width * tileSize.X), (ushort)(data.Height * tileSize.Y));
             this.TileSize = tileSize;
         }
 
@@ -40,8 +39,6 @@
         }
 
         public Vector2US Size { get; private set; }
-
-        public Vector2US SizeInPixel { get; private set; }
 
         public Vector2US TileSize { get; private set; }
 

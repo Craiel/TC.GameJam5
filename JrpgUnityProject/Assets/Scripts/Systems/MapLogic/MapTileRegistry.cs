@@ -1,7 +1,9 @@
-﻿namespace Assets.Scripts.Systems.Map
+﻿namespace Assets.Scripts.Systems.MapLogic
 {
     using System;
     using System.Collections.Generic;
+
+    using Assets.Scripts.Systems.Map;
 
     using CarbonCore.Utils.Unity.Data;
     
