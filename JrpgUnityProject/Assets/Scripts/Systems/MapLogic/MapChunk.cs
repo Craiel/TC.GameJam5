@@ -73,6 +73,7 @@
                 if (this.spriteRenderer == null)
                 {
                     this.spriteRenderer = this.gameObject.AddComponent<SpriteRenderer>();
+                    this.spriteRenderer.sortingOrder = this.layer.Order;
                 }
 
                 this.spriteRenderer.sprite = MapRenderer.RenderMap(this.layer, this.Size, this.Offset, this.tileRegistry);

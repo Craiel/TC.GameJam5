@@ -1,15 +1,11 @@
 ﻿namespace Assets.Scripts.UI
 {
-
     using UnityEngine;
-
-    using System.Collections;
-
+    
     using UnityEngine.UI;
 
     public class CombatActionPanel : BasePanel
     {
-
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
@@ -50,7 +46,6 @@
         // -------------------------------------------------------------------
         // Private
         // -------------------------------------------------------------------
-
         private enum CombatMenu
         {
             Action,

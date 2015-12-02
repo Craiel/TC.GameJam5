@@ -4,9 +4,7 @@
     using Assets.Scripts.Enums;
     using Assets.Scripts.Game;
     using Assets.Scripts.InputSystem;
-
-    using CarbonCore.Utils.Unity.Logic.Resource;
-
+    
     using UnityEngine;
     using UnityEngine.UI;
 

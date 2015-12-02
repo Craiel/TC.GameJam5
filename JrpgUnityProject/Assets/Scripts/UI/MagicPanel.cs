@@ -1,7 +1,5 @@
 ﻿namespace Assets.Scripts.UI
 {
-    using Assets.Scripts.Enums;
-
     using UnityEngine;
 
     public class MagicPanel : BasePanel
@@ -20,7 +18,5 @@
 
         [SerializeField]
         public SpellButton SpellButton4;
-
-
     }
 }
