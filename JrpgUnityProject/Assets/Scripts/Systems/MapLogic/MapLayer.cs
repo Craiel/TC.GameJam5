@@ -13,6 +13,8 @@
 
         private GameMapLayer layer;
 
+        private SpriteRenderer overlayRenderer;
+
         private MapTileRegistry tileRegistry;
 
         private ushort chunkSize = Constants.DefaultChunkSize;
@@ -36,6 +38,10 @@
 
             Diagnostic.Assert(this.chunkSize > 0 && this.chunkSize < 50);
 
+            // Create the overlay renderer for this layer for full screen effects etc
+            this.overlayRenderer = this.gameObject.AddComponent<SpriteRenderer>();
+            this.overlayRenderer.enabled = false;
+            
             // Destroy just in case
             this.DestroyChunks();
             int x = 0;

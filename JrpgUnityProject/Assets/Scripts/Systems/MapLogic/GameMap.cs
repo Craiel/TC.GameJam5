@@ -27,10 +27,12 @@ namespace Assets.Scripts.Systems.MapLogic
             this.TileSize = new Vector2I(data.TileWidth, data.TileHeight);
 
             // Create the layer data
+            // For now we assume the order in data is correct
             this.Layers = new List<GameMapLayer>();
+            int layerOrder = 0;
             foreach (TiledMapLayerData layer in data.Layers)
             {
-                this.Layers.Add(GameMapLayer.Create(layer, this.TileSize));
+                this.Layers.Add(GameMapLayer.Create(layer, this.TileSize, layerOrder++));
             }
 
             // Create the tileset data

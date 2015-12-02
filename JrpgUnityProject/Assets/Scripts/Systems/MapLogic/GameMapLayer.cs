@@ -11,12 +11,13 @@
         // -------------------------------------------------------------------
         // Constructor
         // -------------------------------------------------------------------
-        public GameMapLayer(TiledMapLayerData data, Vector2I tileSize)
+        public GameMapLayer(TiledMapLayerData data, Vector2I tileSize, int order)
         {
             this.data = data;
 
             this.Size = new Vector2I(data.Width, data.Height);
             this.TileSize = tileSize;
+            this.Order = order;
         }
 
         // -------------------------------------------------------------------
@@ -42,6 +43,8 @@
 
         public Vector2I TileSize { get; private set; }
 
+        public int Order { get; private set; }
+
         public ushort[] Data
         {
             get
@@ -50,9 +53,9 @@
             }
         }
 
-        public static GameMapLayer Create(TiledMapLayerData source, Vector2I tileSize)
+        public static GameMapLayer Create(TiledMapLayerData source, Vector2I tileSize, int order)
         {
-            return new GameMapLayer(source, tileSize);
+            return new GameMapLayer(source, tileSize, order);
         }
     }
 }

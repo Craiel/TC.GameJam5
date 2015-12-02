@@ -16,8 +16,5 @@
 
         [SerializeField]
         public Text SpellCostText;
-
-
-
     }
 }

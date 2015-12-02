@@ -1,7 +1,5 @@
 ﻿namespace Assets.Scripts.UI
 {
-    using Assets.Scripts.Enums;
-
     using UnityEngine;
 
     public class ItemPanel : BasePanel
@@ -20,6 +18,5 @@
 
         [SerializeField]
         public ItemButton ItemButton4;
-
     }
 }
