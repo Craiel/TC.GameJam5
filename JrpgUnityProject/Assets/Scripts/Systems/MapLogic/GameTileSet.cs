@@ -8,6 +8,8 @@
 
     public class GameTileSet
     {
+        private static int nextId;
+
         private readonly TiledMapTileset data;
 
         // -------------------------------------------------------------------
@@ -15,6 +17,8 @@
         // -------------------------------------------------------------------
         public GameTileSet(TiledMapTileset data)
         {
+            this.Id = nextId++;
+
             this.data = data;
 
             this.Size = new Vector2I(data.ImageWidth, data.ImageHeight);
@@ -32,6 +36,8 @@
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
+        public int Id { get; private set; }
+
         public string Name
         {
             get

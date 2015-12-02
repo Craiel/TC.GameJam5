@@ -2,7 +2,7 @@
 {
     using Assets.Scripts.Enums;
     using Assets.Scripts.Systems.Contracts;
-
+    
     using CarbonCore.Utils.Unity.Logic.Scene;
 
     public abstract class GameScene : BaseScene, IGameScene
@@ -19,7 +19,7 @@
         // Public
         // -------------------------------------------------------------------
         public abstract GameSceneType Type { get; }
-
+        
         protected override bool ScenePostDestroy()
         {
             // This should always be last, it's cleaning up the instance objects

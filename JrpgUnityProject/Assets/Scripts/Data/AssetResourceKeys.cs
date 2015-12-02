@@ -16,5 +16,9 @@
         public static readonly ResourceKey MapOutdoorTestAssetKey = ResourceKey.Create<TextAsset>("MapData/Start");
 
         public static readonly ResourceKey OutdoorMapDisplayAssetKey = ResourceKey.Create<GameObject>("Outdoor/MapDisplay");
+
+        public static readonly ResourceKey PrefabMapMeshAssetKey = ResourceKey.Create<GameObject>("Prefabs/MapMesh");
+
+        public static readonly ResourceKey MaterialMapAssetKey = ResourceKey.Create<Material>("Materials/MapMaterial");
     }
 }

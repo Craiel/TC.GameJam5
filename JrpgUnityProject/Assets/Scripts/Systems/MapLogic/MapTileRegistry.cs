@@ -1,13 +1,16 @@
 ﻿namespace Assets.Scripts.Systems.MapLogic
 {
     using System.Collections.Generic;
-
-    using CarbonCore.Utils.Unity.Data;
     
+    using CarbonCore.Utils.Unity.Data;
+
+    using UnityEngine;
+
     public class MapTileRegistry
     {
         private readonly IDictionary<int, GameTileSet> tilesetLookup;
         private readonly IDictionary<int, int> tileIndexLookup;
+        private readonly IDictionary<GameMapLayer, MapLayerMaterial> materialLookup; 
 
         private ushort nextTileId;
 
@@ -18,6 +21,7 @@
         {
             this.tilesetLookup = new Dictionary<int, GameTileSet>();
             this.tileIndexLookup = new Dictionary<int, int>();
+            this.materialLookup = new Dictionary<GameMapLayer, MapLayerMaterial>();
         }
          
         // -------------------------------------------------------------------
@@ -40,19 +44,31 @@
             this.nextTileId = 0;
         }
 
-        public GameTileSet GetTile(int id, out Vector2I tileOffset)
+        public Material GetMaterial(GameMapLayer layer)
+        {
+            if (!this.materialLookup.ContainsKey(layer))
+            {
+                // No material for this layer yet, we need to build one
+                MapLayerMaterial material = MapRenderer.BuildLayerMaterial(layer, this);
+                this.materialLookup.Add(layer, material);
+            }
+
+            return this.materialLookup[layer].Material;
+        }
+
+        public GameTileSet GetTile(int tileId, out Vector2I tileOffset)
         {
             // Given a id which is global to the registry we will find the right tileset
             // and then calculate the offset and size of the tile in question
             tileOffset = Vector2I.Zero;
 
-            if (!this.tilesetLookup.ContainsKey(id))
+            if (!this.tilesetLookup.ContainsKey(tileId))
             {
                 return null;
             }
 
-            GameTileSet result = this.tilesetLookup[id];
-            int tileIndex = this.tileIndexLookup[id];
+            GameTileSet result = this.tilesetLookup[tileId];
+            int tileIndex = this.tileIndexLookup[tileId];
             
             int row = tileIndex / result.TilesPerRow;
             int column = tileIndex - (row * result.TilesPerRow);
@@ -62,7 +78,7 @@
 
             tileOffset = new Vector2I(column * result.TileSize.X, row * result.TileSize.Y);
 
-            return this.tilesetLookup[id];
+            return this.tilesetLookup[tileId];
         }
     }
 }

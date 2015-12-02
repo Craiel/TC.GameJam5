@@ -39,6 +39,8 @@
             ResourceProvider.Instance.RegisterResource(AssetResourceKeys.SfxFootstepsAssetKey);
             ResourceProvider.Instance.RegisterResource(AssetResourceKeys.MapOutdoorTestAssetKey);
             ResourceProvider.Instance.RegisterResource(AssetResourceKeys.OutdoorMapDisplayAssetKey);
+            ResourceProvider.Instance.RegisterResource(AssetResourceKeys.PrefabMapMeshAssetKey);
+            ResourceProvider.Instance.RegisterResource(AssetResourceKeys.MaterialMapAssetKey);
             
             return base.SceneRegisterResources1();
         }

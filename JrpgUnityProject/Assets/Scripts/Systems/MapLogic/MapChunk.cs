@@ -2,14 +2,19 @@
 {
     using System;
 
+    using Assets.Scripts.Data;
     using Assets.Scripts.Game;
 
     using CarbonCore.Utils.Compat.Diagnostics;
     using CarbonCore.Utils.Unity.Data;
+    using CarbonCore.Utils.Unity.Logic.MeshGeneration;
+    using CarbonCore.Utils.Unity.Logic.Resource;
 
     using UnityEngine;
     public class MapChunk : MonoBehaviour
     {
+        private CustomPlane plane;
+
         private SpriteRenderer spriteRenderer;
 
         private GameMapLayer layer;
@@ -74,6 +79,34 @@
                 {
                     this.spriteRenderer = this.gameObject.AddComponent<SpriteRenderer>();
                     this.spriteRenderer.sortingOrder = this.layer.Order;
+                }
+
+                if (this.plane == null)
+                {
+                    var planeOptions = new PlaneOptions
+                    {
+                        Width = this.Size.X * this.layer.TileSize.X / Constants.DefaultMapUnit,
+                        Height = this.Size.Y * this.layer.TileSize.Y / Constants.DefaultMapUnit,
+                        WidthSegments = this.Size.X,
+                        HeightSegments = this.Size.Y,
+                        Name = this.name
+                    };
+                    
+                    using (var resource = ResourceProvider.Instance.AcquireResource<GameObject>(AssetResourceKeys.PrefabMapMeshAssetKey))
+                    {
+                        var instance = Instantiate(resource.Data);
+                        this.plane = PlaneGeneration.CreateMeshObject(planeOptions, customObject: instance);
+
+                        // Move the instance into place
+                        instance.transform.SetParent(this.gameObject.transform);
+                        instance.transform.localScale = new Vector3(1, 1, 1);
+                        instance.transform.localPosition = new Vector3(0, 0, -0.1f);
+                        instance.transform.rotation = Quaternion.AngleAxis(270, Vector3.right);
+                    }
+
+                    // Todo: figure out how we can achieve this..
+                    var meshRenderer = this.plane.GetComponent<MeshRenderer>();
+                    meshRenderer.material = this.tileRegistry.GetMaterial(this.layer);
                 }
 
                 this.spriteRenderer.sprite = MapRenderer.RenderMap(this.layer, this.Size, this.Offset, this.tileRegistry);

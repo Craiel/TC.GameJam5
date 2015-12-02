@@ -1,6 +1,11 @@
 ﻿namespace Assets.Scripts.Systems.MapLogic
 {
+    using System.Collections.Generic;
+
+    using Assets.Scripts.Data;
+
     using CarbonCore.Utils.Unity.Data;
+    using CarbonCore.Utils.Unity.Logic.Resource;
 
     using UnityEngine;
 
@@ -9,6 +14,64 @@
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
+        public static MapLayerMaterial BuildLayerMaterial(GameMapLayer layer, MapTileRegistry tileRegistry)
+        {
+            Material instance;
+            using (var resource = ResourceProvider.Instance.AcquireResource<Material>(AssetResourceKeys.MaterialMapAssetKey))
+            {
+                instance = new Material(resource.Data);
+            }
+
+            // Todo: Create the texture
+            IList<ushort> uniqueDataPoints = new List<ushort>();
+            foreach (ushort dataPoint in layer.Data)
+            {
+                if (dataPoint == 0 || uniqueDataPoints.Contains(dataPoint))
+                {
+                    continue;
+                }
+
+                uniqueDataPoints.Add(dataPoint);
+            }
+
+            var tileCount = Mathf.CeilToInt(uniqueDataPoints.Count / 2.0f);
+            var texture = new Texture2D(tileCount * layer.TileSize.X, tileCount * layer.TileSize.Y);
+            ClearBuffer(texture, Constants.MapClearColor);
+
+            int x = 0;
+            int y = 0;
+            foreach (ushort dataPoint in uniqueDataPoints)
+            {
+                Vector2I tileOffset;
+                GameTileSet tileSet = tileRegistry.GetTile(dataPoint - 1, out tileOffset);
+
+                // Blit the tile onto our texture
+                Color[] data = tileSet.Texture.GetPixels(
+                    tileOffset.X,
+                    tileOffset.Y,
+                    tileSet.TileSize.X,
+                    tileSet.TileSize.Y);
+                texture.SetPixels(
+                    x * tileSet.TileSize.X,
+                    y * tileSet.TileSize.Y,
+                    tileSet.TileSize.X,
+                    tileSet.TileSize.Y,
+                    data);
+
+                x++;
+
+                if (x == tileCount)
+                {
+                    x = 0;
+                    y++;
+                }
+            }
+            
+            texture.Apply();
+            instance.mainTexture = texture;
+            return new MapLayerMaterial(instance);
+        }
+        
         public static Sprite RenderMap(GameMapLayer layer, Vector2I size, Vector2I offset, MapTileRegistry tileRegistry)
         {
             // Make the buffer texture
