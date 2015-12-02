@@ -49,8 +49,8 @@
             if (!this.materialLookup.ContainsKey(layer))
             {
                 // No material for this layer yet, we need to build one
-                MapLayerMaterial material = MapRenderer.BuildLayerMaterial(layer, this);
-                this.materialLookup.Add(layer, material);
+                //MapLayerMaterial material = MapRenderer.BuildLayerMaterial(layer, this);
+                //this.materialLookup.Add(layer, material);
             }
 
             return this.materialLookup[layer].Material;

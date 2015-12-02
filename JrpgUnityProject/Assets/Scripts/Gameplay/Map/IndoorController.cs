@@ -2,7 +2,7 @@
 {
     using Assets.Scripts.Systems.MapLogic;
 
-    public class IndoorComponent : BaseMapComponent
+    public class IndoorController : BaseMapComponent
     {
         // -------------------------------------------------------------------
         // Public

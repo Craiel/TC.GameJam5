@@ -10,7 +10,7 @@
 
     using UnityEngine;
 
-    public class OutdoorComponent : BaseMapComponent
+    public class OutdoorController : BaseMapComponent
     {
         private bool initiateMusicUpdate;
 
@@ -29,7 +29,7 @@
             }
 
             // Todo: fetch from current data instead of hardcoded
-            this.SetMap(AssetResourceKeys.MapOutdoorTestAssetKey);
+            // this.SetMap(AssetResourceKeys.MapOutdoorTestAssetKey);
 
             this.initiateMusicUpdate = true;
         }

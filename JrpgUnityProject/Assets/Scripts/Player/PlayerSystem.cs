@@ -5,12 +5,12 @@
 
     using CarbonCore.Utils.Unity.Data;
     
-    public class PlayerComponent : GameComponent
+    public class PlayerSystem : GameComponent
     {
         // -------------------------------------------------------------------
         // Constructor
         // -------------------------------------------------------------------
-        public PlayerComponent()
+        public PlayerSystem()
         {
             this.OutdoorPosition = Vector2I.Zero;
         }

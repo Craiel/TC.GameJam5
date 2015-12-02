@@ -14,7 +14,7 @@
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
-        public static MapLayerMaterial BuildLayerMaterial(GameMapLayer layer, MapTileRegistry tileRegistry)
+        /*public static MapLayerMaterial BuildLayerMaterial(GameMapLayer layer, MapTileRegistry tileRegistry)
         {
             Material instance;
             using (var resource = ResourceProvider.Instance.AcquireResource<Material>(AssetResourceKeys.MaterialMapAssetKey))
@@ -143,6 +143,6 @@
                     buffer.SetPixel(x, y, targetColor);
                 }
             }
-        }
+        }*/
     }
 }

@@ -7,7 +7,7 @@
 
     public class SceneIndoor : GameScene
     {
-        private IndoorComponent component;
+        private IndoorController controller;
 
         // -------------------------------------------------------------------
         // Constructor
@@ -30,20 +30,20 @@
 
         protected override bool ScenePostLoad()
         {
-            // Create, initialize and register the game component that will drive the scene
-            this.component = new IndoorComponent();
-            this.component.Initialize();
-            Components.Instance.RegisterComponent(this.component);
+            // Create, initialize and register the game controller that will drive the scene
+            this.controller = new IndoorController();
+            this.controller.Initialize();
+            Components.Instance.RegisterComponent(this.controller);
 
             return base.ScenePostLoad();
         }
 
         protected override bool ScenePreDestroy()
         {
-            // Unregister the main game component for the scene
-            Components.Instance.UnregisterComponent(this.component);
-            this.component.Destroy();
-            this.component = null;
+            // Unregister the main game controller for the scene
+            Components.Instance.UnregisterComponent(this.controller);
+            this.controller.Destroy();
+            this.controller = null;
 
             return base.ScenePreDestroy();
         }

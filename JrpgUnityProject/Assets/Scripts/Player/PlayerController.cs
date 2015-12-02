@@ -41,15 +41,15 @@ namespace Assets.Scripts.Player
             // Todo: this should be refactored so we can consciously start the controller instead of a passive awake
             if (!this.initialized)
             {
-                OutdoorComponent component = Components.Instance.GetComponent<OutdoorComponent>();
-                if (component == null)
+                OutdoorController controller = Components.Instance.GetComponent<OutdoorController>();
+                if (controller == null)
                 {
                     // not ready yet...
                     return;
                 }
 
-                this.mapSize = component.MapSize;
-                this.mapTileSize = component.MapTileSize;
+                this.mapSize = controller.MapSize;
+                this.mapTileSize = controller.MapTileSize;
 
                 Camera.main.GetComponent<PlayerCamera>().target = this.transform;
                 this.PlayerAnimator = this.GetComponent<Animator>();

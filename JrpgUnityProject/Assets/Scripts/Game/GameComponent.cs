@@ -9,7 +9,7 @@
 
     using UnityEngine;
 
-    public abstract class GameComponent
+    public abstract class GameComponent : DelayedLoadedObject
     {
         private readonly IList<IntervalTrigger> intervals;
 
