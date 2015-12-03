@@ -3,6 +3,7 @@
     using System.Collections.Generic;
 
     using Assets.Scripts.Audio;
+    using Assets.Scripts.Maps;
     using Assets.Scripts.Player;
 
     using CarbonCore.Utils.Unity.Logic;
@@ -21,23 +22,47 @@
             this.dynamicComponents = new List<GameComponent>();
 
             // Create the static components
-            this.Audio = new AudioComponent();
-            this.Player = new PlayerComponent();
+            this.Audio = new AudioSystem();
+            this.Player = new PlayerSystem();
+            this.Map = new MapSystem();
         }
 
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
-        public AudioComponent Audio { get; private set; }
+        public AudioSystem Audio { get; private set; }
 
-        public PlayerComponent Player { get; private set; }
+        public PlayerSystem Player { get; private set; }
+
+        public MapSystem Map { get; private set; }
 
         public void Initialize()
         {
             this.Audio.Initialize();
             this.Player.Initialize();
+            this.Map.Initialize();
 
             this.isInitialized = true;
+        }
+
+        public bool ContinueLoad()
+        {
+            if (this.Audio.ContinueLoad())
+            {
+                return true;
+            }
+
+            if (this.Player.ContinueLoad())
+            {
+                return true;
+            }
+
+            if (this.Map.ContinueLoad())
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public void Update()
@@ -49,6 +74,7 @@
 
             this.Audio.Update();
             this.Player.Update();
+            this.Map.Update();
 
             foreach (GameComponent component in this.dynamicComponents)
             {
@@ -61,6 +87,7 @@
             IList<GameComponent> result = new List<GameComponent>(this.dynamicComponents);
             result.Add(this.Audio);
             result.Add(this.Player);
+            result.Add(this.Map);
             return result;
         }
 

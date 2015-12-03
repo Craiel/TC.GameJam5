@@ -109,7 +109,7 @@
                     meshRenderer.material = this.tileRegistry.GetMaterial(this.layer);
                 }
 
-                this.spriteRenderer.sprite = MapRenderer.RenderMap(this.layer, this.Size, this.Offset, this.tileRegistry);
+                // this.spriteRenderer.sprite = MapRenderer.RenderMap(this.layer, this.Size, this.Offset, this.tileRegistry);
             }
             catch (Exception e)
             {

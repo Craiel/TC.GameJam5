@@ -13,7 +13,7 @@
 
     using UnityEngine;
 
-    public class AudioComponent : GameComponent
+    public class AudioSystem : GameComponent
     {
         private readonly IDictionary<GameAudioType, AudioSource> audioSources;
         private readonly IDictionary<GameAudioType, bool> loopState;
@@ -21,7 +21,7 @@
         // -------------------------------------------------------------------
         // Constructor
         // -------------------------------------------------------------------
-        public AudioComponent()
+        public AudioSystem()
         {
             this.audioSources = new Dictionary<GameAudioType, AudioSource>();
             this.loopState = new Dictionary<GameAudioType, bool>();

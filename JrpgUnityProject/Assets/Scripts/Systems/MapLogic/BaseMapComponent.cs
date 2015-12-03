@@ -84,7 +84,7 @@
 
         protected MapDisplayBehavior Display { get; set; }
 
-        protected void SetMap(ResourceKey resource)
+        protected void SetMap(GameMap map)
         {
             Diagnostic.Assert(this.Display != null, "Display should be set before map!");
 
@@ -94,10 +94,10 @@
             this.Display.Reset();
 
             // Load the new map
-            this.Map = GameMap.Load(resource);
-            Diagnostic.Info("Loaded map {0}", this.Map.Name);
+            //this.Map = GameMap.Load(resource);
+            //Diagnostic.Info("Loaded map {0}", this.Map.Name);
 
-            // Build the tile registry
+            /*// Build the tile registry
             foreach (GameTileSet tileSet in this.Map.TileSets)
             {
                 tileRegistry.RegisterTileSet(tileSet);
@@ -125,7 +125,7 @@
                             break;
                         }
                 }
-            }
+            }*/
 
             this.Invalidate();
         }

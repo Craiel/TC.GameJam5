@@ -9,7 +9,7 @@
 
     public class SceneOutdoor : GameScene
     {
-        private OutdoorComponent component;
+        private OutdoorController controller;
 
         // -------------------------------------------------------------------
         // Constructor
@@ -41,28 +41,48 @@
             ResourceProvider.Instance.RegisterResource(AssetResourceKeys.OutdoorMapDisplayAssetKey);
             ResourceProvider.Instance.RegisterResource(AssetResourceKeys.PrefabMapMeshAssetKey);
             ResourceProvider.Instance.RegisterResource(AssetResourceKeys.MaterialMapAssetKey);
+
+            Components.Instance.Map.RegisterMap(AssetResourceKeys.MapOutdoorTestAssetKey);
             
             return base.SceneRegisterResources1();
         }
 
+        protected override bool SceneLoad()
+        {
+            if (Components.Instance.ContinueLoad())
+            {
+                return true;
+            }
+
+            return base.SceneLoad();
+        }
+
         protected override bool ScenePostLoad()
         {
-            // Create, initialize and register the game component that will drive the scene
-            this.component = new OutdoorComponent();
-            this.component.Initialize();
-            Components.Instance.RegisterComponent(this.component);
+            // Create, initialize and register the game controller that will drive the scene
+            this.controller = new OutdoorController();
+            this.controller.Initialize();
+            Components.Instance.RegisterComponent(this.controller);
 
             return base.ScenePostLoad();
         }
 
         protected override bool ScenePreDestroy()
         {
-            // Unregister the main game component for the scene
-            Components.Instance.UnregisterComponent(this.component);
-            this.component.Destroy();
-            this.component = null;
+            // Un-register the main game controller for the scene
+            Components.Instance.UnregisterComponent(this.controller);
+            this.controller.Destroy();
+            this.controller = null;
 
             return base.ScenePreDestroy();
+        }
+
+        protected override bool ScenePostDestroy()
+        {
+            // Clear out the map data, no longer needed
+            Components.Instance.Map.Clear();
+
+            return base.ScenePostDestroy();
         }
     }
 }
