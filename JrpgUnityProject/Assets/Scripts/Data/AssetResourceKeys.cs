@@ -20,5 +20,7 @@
         public static readonly ResourceKey PrefabMapMeshAssetKey = ResourceKey.Create<GameObject>("Prefabs/MapMesh");
 
         public static readonly ResourceKey MaterialMapAssetKey = ResourceKey.Create<Material>("Materials/MapMaterial");
+
+        public static readonly ResourceKey Character1AssetKey = ResourceKey.Create<GameObject>("Characters/Character_1");
     }
 }

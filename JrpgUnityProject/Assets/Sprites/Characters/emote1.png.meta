@@ -1,0 +1,1112 @@
+fileFormatVersion: 2
+guid: d69b84bc69486fd4fb9f250229380860
+timeCreated: 1449078343
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: emote1_0
+    21300002: emote1_1
+    21300004: emote1_2
+    21300006: emote1_3
+    21300008: emote1_4
+    21300010: emote1_5
+    21300012: emote1_6
+    21300014: emote1_7
+    21300016: emote1_8
+    21300018: emote1_9
+    21300020: emote1_10
+    21300022: emote1_11
+    21300024: emote1_12
+    21300026: emote1_13
+    21300028: emote1_14
+    21300030: emote1_15
+    21300032: emote1_16
+    21300034: emote1_17
+    21300036: emote1_18
+    21300038: emote1_19
+    21300040: emote1_20
+    21300042: emote1_21
+    21300044: emote1_22
+    21300046: emote1_23
+    21300048: emote1_24
+    21300050: emote1_25
+    21300052: emote1_26
+    21300054: emote1_27
+    21300056: emote1_28
+    21300058: emote1_29
+    21300060: emote1_30
+    21300062: emote1_31
+    21300064: emote1_32
+    21300066: emote1_33
+    21300068: emote1_34
+    21300070: emote1_35
+    21300072: emote1_36
+    21300074: emote1_37
+    21300076: emote1_38
+    21300078: emote1_39
+    21300080: emote1_40
+    21300082: emote1_41
+    21300084: emote1_42
+    21300086: emote1_43
+    21300088: emote1_44
+    21300090: emote1_45
+    21300092: emote1_46
+    21300094: emote1_47
+    21300096: emote1_48
+    21300098: emote1_49
+    21300100: emote1_50
+    21300102: emote1_51
+    21300104: emote1_52
+    21300106: emote1_53
+    21300108: emote1_54
+    21300110: emote1_55
+    21300112: emote1_56
+    21300114: emote1_57
+    21300116: emote1_58
+    21300118: emote1_59
+    21300120: emote1_60
+    21300122: emote1_61
+    21300124: emote1_62
+    21300126: emote1_63
+    21300128: emote1_64
+    21300130: emote1_65
+    21300132: emote1_66
+    21300134: emote1_67
+    21300136: emote1_68
+    21300138: emote1_69
+    21300140: emote1_70
+    21300142: emote1_71
+    21300144: emote1_72
+    21300146: emote1_73
+    21300148: emote1_74
+    21300150: emote1_75
+    21300152: emote1_76
+    21300154: emote1_77
+    21300156: emote1_78
+    21300158: emote1_79
+    21300160: emote1_80
+    21300162: emote1_81
+    21300164: emote1_82
+    21300166: emote1_83
+    21300168: emote1_84
+    21300170: emote1_85
+    21300172: emote1_86
+    21300174: emote1_87
+    21300176: emote1_88
+    21300178: emote1_89
+    21300180: emote1_90
+    21300182: emote1_91
+    21300184: emote1_92
+    21300186: emote1_93
+    21300188: emote1_94
+    21300190: emote1_95
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: emote1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_6
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_7
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_8
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_9
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_10
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_11
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 504
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_13
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_14
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_15
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_17
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_18
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_19
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_20
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_21
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_22
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_23
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 432
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_25
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_26
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_27
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_28
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_29
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_30
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_31
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_32
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_33
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_34
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_35
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 360
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_37
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_38
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_39
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_40
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_41
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_42
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_43
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_44
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_45
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_46
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_47
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 288
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_49
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_50
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_51
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_52
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_53
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_54
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_55
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_56
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_57
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_58
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_59
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 216
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_61
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_62
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_63
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_64
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_65
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_66
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_67
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_68
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_69
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_70
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_71
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 144
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_73
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_74
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_75
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_76
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_77
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_78
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_79
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_80
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_81
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_82
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_83
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 72
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_85
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_86
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_87
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_88
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_89
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_90
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_91
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_92
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_93
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_94
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: emote1_95
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 0
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
