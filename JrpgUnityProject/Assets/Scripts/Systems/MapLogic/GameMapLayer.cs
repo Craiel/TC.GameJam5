@@ -49,5 +49,10 @@
 
             return base.ContinueLoad();
         }
+
+        public void Destroy()
+        {
+            // Todo: destroy the texture and clear the data to free up the memory
+        }
     }
 }

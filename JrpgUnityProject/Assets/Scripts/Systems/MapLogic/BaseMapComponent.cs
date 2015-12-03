@@ -1,17 +1,11 @@
 ﻿namespace Assets.Scripts.Systems.MapLogic
 {
-    using System;
     using System.Collections.Generic;
-    using System.Linq;
 
     using Assets.Scripts.Game;
-
-    using CarbonCore.ContentServices.Compat.Logic.Enums;
     using CarbonCore.Utils.Compat.Diagnostics;
     using CarbonCore.Utils.Unity.Data;
-
-    using UnityEngine;
-
+    
     // Generic component dealing with map navigation and handling
     public abstract class BaseMapComponent : GameComponent
     {

@@ -75,6 +75,7 @@ namespace Assets.Scripts.Systems.MapLogic
 
         public override bool ContinueLoad()
         {
+            // Order is important, tilesets need to be loaded for the layers to load properly
             if (this.LoadTilesets())
             {
                 return true;
@@ -85,7 +86,25 @@ namespace Assets.Scripts.Systems.MapLogic
                 return true;
             }
 
+            // Now we can discard the tilesets since the layers build their own map
+            foreach (GameTileSet tileSet in this.TileSets)
+            {
+                tileSet.Destroy();
+            }
+
+            this.TileSets.Clear();
+
             return base.ContinueLoad();
+        }
+
+        public void Destroy()
+        {
+            foreach (GameMapLayer layer in this.Layers)
+            {
+                layer.Destroy();
+            }
+
+            this.Layers.Clear();
         }
 
         // -------------------------------------------------------------------

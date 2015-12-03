@@ -203,6 +203,9 @@
             Diagnostic.TakeTimeMeasure(this.transitionTime);
             Diagnostic.Info("Transition to {0} completed in {1}ms", this.transitionTarget, Diagnostic.GetTimeInMS(this.transitionTime.Total));
 
+            // Try to free up un-used assets after transition
+            Resources.UnloadUnusedAssets();
+
             this.transitioning = false;
             this.transitionTime = null;
             this.ActiveSceneType = this.activeScene.Type;

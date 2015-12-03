@@ -66,5 +66,11 @@
 
             return base.ContinueLoad();
         }
+
+        public void Destroy()
+        {
+            // Clear out the texture
+            this.Texture = null;
+        }
     }
 }
