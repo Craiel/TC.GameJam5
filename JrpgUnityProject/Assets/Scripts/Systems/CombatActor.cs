@@ -2,6 +2,7 @@
 {
     using Assets.Scripts.Enums;
 
+    using CarbonCore.Utils.MathUtils;
     using CarbonCore.Utils.Unity.Data;
 
     public class CombatActor : BaseActor

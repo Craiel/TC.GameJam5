@@ -5,8 +5,9 @@
     using Assets.Scripts.Game;
     using Assets.Scripts.Systems.MapLogic;
 
-    using CarbonCore.Utils.Compat.Diagnostics;
+    using CarbonCore.Utils.Diagnostics;
     using CarbonCore.Utils.Unity.Data;
+    using CarbonCore.Utils.Unity.Logic.Enums;
 
     public class MapSystem : GameComponent
     {
@@ -36,16 +37,6 @@
             this.pendingMaps.Enqueue(resource);
         }
 
-        public override bool ContinueLoad()
-        {
-            if (this.LoadMap())
-            {
-                return true;
-            }
-
-            return base.ContinueLoad();
-        }
-
         public void Clear()
         {
             // Clear out all data
@@ -54,6 +45,19 @@
             this.pendingMaps.Clear();
 
             this.currentLoadingMap = null;
+        }
+
+        // -------------------------------------------------------------------
+        // Protected
+        // -------------------------------------------------------------------
+        protected override bool DoContinueLoad(DelayedLoadedObjectPhase phase)
+        {
+            if (this.LoadMap())
+            {
+                return true;
+            }
+
+            return base.DoContinueLoad(phase);
         }
 
         // -------------------------------------------------------------------

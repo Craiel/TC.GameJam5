@@ -1,9 +1,11 @@
 ﻿namespace Assets.Scripts.Systems.MapLogic
 {
-    using CarbonCore.ContentServices.Compat.Data.Tiled;
-    using CarbonCore.ContentServices.Compat.Logic.Enums;
+    using CarbonCore.ContentServices.Data.Tiled;
+    using CarbonCore.ContentServices.Logic.Enums;
+    using CarbonCore.Utils.MathUtils;
     using CarbonCore.Utils.Unity.Data;
     using CarbonCore.Utils.Unity.Logic;
+    using CarbonCore.Utils.Unity.Logic.Enums;
 
     public class GameMapLayer : DelayedLoadedObject
     {
@@ -41,18 +43,21 @@
             return new GameMapLayer(source, tileSize, order);
         }
 
-        public override bool ContinueLoad()
+        public void Destroy()
+        {
+            // Todo: destroy the texture and clear the data to free up the memory
+        }
+
+        // -------------------------------------------------------------------
+        // Protected
+        // -------------------------------------------------------------------
+        protected override bool DoContinueLoad(DelayedLoadedObjectPhase phase)
         {
             // TODO: Load the texture and re-format the data accordingly
 
             this.pendingData = null;
 
-            return base.ContinueLoad();
-        }
-
-        public void Destroy()
-        {
-            // Todo: destroy the texture and clear the data to free up the memory
+            return base.DoContinueLoad(phase);
         }
     }
 }

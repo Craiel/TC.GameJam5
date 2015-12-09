@@ -5,8 +5,8 @@
     using Assets.Scripts.Enums;
     using Assets.Scripts.Game;
 
-    using CarbonCore.Utils.Compat.Collections;
-    using CarbonCore.Utils.Compat.Diagnostics;
+    using CarbonCore.Utils.Collections;
+    using CarbonCore.Utils.Diagnostics;
     using CarbonCore.Utils.Unity.Logic;
 
     using UnityEngine;

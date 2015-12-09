@@ -2,8 +2,8 @@
 {
     using System.Collections.Generic;
 
-    using CarbonCore.Utils.Compat.Diagnostics;
-    using CarbonCore.Utils.Unity.Data;
+    using CarbonCore.Utils.Diagnostics;
+    using CarbonCore.Utils.MathUtils;
 
     using UnityEngine;
 

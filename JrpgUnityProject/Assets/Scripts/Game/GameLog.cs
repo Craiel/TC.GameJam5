@@ -1,6 +1,6 @@
 ﻿namespace Assets.Scripts.Game
 {
-    using CarbonCore.Utils.Compat.Contracts;
+    using CarbonCore.Utils.Contracts;
 
     using global::System;
 
