@@ -2,6 +2,8 @@
 {
     using System;
 
+    using Assets.Scripts.Enums;
+
     using CarbonCore.Utils.Unity.Data;
 
     public abstract class BaseActor
@@ -25,6 +27,7 @@
         public ResourceKey SpriteKey { get; private set; }
         public ResourceKey PrefabKey { get; private set; }
         public bool IsInitialized { get; private set; }
+        public ActorType ActorType { get; private set; }
 
         public virtual void Initialize()
         {
