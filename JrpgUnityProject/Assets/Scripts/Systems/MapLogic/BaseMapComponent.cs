@@ -3,8 +3,8 @@
     using System.Collections.Generic;
 
     using Assets.Scripts.Game;
-    using CarbonCore.Utils.Compat.Diagnostics;
-    using CarbonCore.Utils.Unity.Data;
+    using CarbonCore.Utils.Diagnostics;
+    using CarbonCore.Utils.MathUtils;
     
     // Generic component dealing with map navigation and handling
     public abstract class BaseMapComponent : GameComponent

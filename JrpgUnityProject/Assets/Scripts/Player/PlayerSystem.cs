@@ -3,7 +3,7 @@
     using Assets.Scripts.Data;
     using Assets.Scripts.Game;
 
-    using CarbonCore.Utils.Unity.Data;
+    using CarbonCore.Utils.MathUtils;
     
     public class PlayerSystem : GameComponent
     {

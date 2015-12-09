@@ -5,8 +5,8 @@
     using Assets.Scripts.Data;
     using Assets.Scripts.Game;
 
-    using CarbonCore.Utils.Compat.Diagnostics;
-    using CarbonCore.Utils.Unity.Data;
+    using CarbonCore.Utils.Diagnostics;
+    using CarbonCore.Utils.MathUtils;
     using CarbonCore.Utils.Unity.Logic.MeshGeneration;
     using CarbonCore.Utils.Unity.Logic.Resource;
 

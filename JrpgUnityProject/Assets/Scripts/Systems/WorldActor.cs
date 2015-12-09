@@ -1,5 +1,6 @@
 ﻿namespace Assets.Scripts.Systems
 {
+    using CarbonCore.Utils.MathUtils;
     using CarbonCore.Utils.Unity.Data;
 
     public class WorldActor : BaseActor

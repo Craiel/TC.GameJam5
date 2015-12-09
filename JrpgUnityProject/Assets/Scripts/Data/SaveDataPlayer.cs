@@ -1,6 +1,6 @@
 ﻿namespace Assets.Scripts.Data
 {
-    using CarbonCore.Utils.Unity.Data;
+    using CarbonCore.Utils.MathUtils;
     using CarbonCore.Utils.Unity.Logic.Json;
 
     using Newtonsoft.Json;

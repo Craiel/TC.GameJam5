@@ -8,9 +8,9 @@
     using Assets.Scripts.Systems.Contracts;
     using Assets.Scripts.UI;
 
-    using CarbonCore.Utils.Compat.Diagnostics;
-    using CarbonCore.Utils.Compat.Diagnostics.Metrics;
-    using CarbonCore.Utils.Compat.Json;
+    using CarbonCore.Utils.Diagnostics;
+    using CarbonCore.Utils.Diagnostics.Metrics;
+    using CarbonCore.Utils.Json;
     using CarbonCore.Utils.Unity.Data;
     using CarbonCore.Utils.Unity.Logic;
     using CarbonCore.Utils.Unity.Logic.Enums;

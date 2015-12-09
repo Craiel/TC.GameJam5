@@ -1,8 +1,8 @@
 ﻿namespace Assets.Scripts.Systems.MapLogic
 {
     using System.Collections.Generic;
-    
-    using CarbonCore.Utils.Unity.Data;
+
+    using CarbonCore.Utils.MathUtils;
 
     using UnityEngine;
 

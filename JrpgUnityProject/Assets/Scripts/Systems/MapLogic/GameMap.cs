@@ -2,10 +2,12 @@ namespace Assets.Scripts.Systems.MapLogic
 {
     using System.Collections.Generic;
 
-    using CarbonCore.ContentServices.Compat.Data.Tiled;
-    using CarbonCore.Utils.Compat.Json;
+    using CarbonCore.ContentServices.Data.Tiled;
+    using CarbonCore.Utils.Json;
+    using CarbonCore.Utils.MathUtils;
     using CarbonCore.Utils.Unity.Data;
     using CarbonCore.Utils.Unity.Logic;
+    using CarbonCore.Utils.Unity.Logic.Enums;
     using CarbonCore.Utils.Unity.Logic.Resource;
 
     using UnityEngine;
@@ -73,7 +75,20 @@ namespace Assets.Scripts.Systems.MapLogic
             }
         }
 
-        public override bool ContinueLoad()
+        public void Destroy()
+        {
+            foreach (GameMapLayer layer in this.Layers)
+            {
+                layer.Destroy();
+            }
+
+            this.Layers.Clear();
+        }
+
+        // -------------------------------------------------------------------
+        // Protected
+        // -------------------------------------------------------------------
+        protected override bool DoContinueLoad(DelayedLoadedObjectPhase phase)
         {
             // Order is important, tilesets need to be loaded for the layers to load properly
             if (this.LoadTilesets())
@@ -94,17 +109,7 @@ namespace Assets.Scripts.Systems.MapLogic
 
             this.TileSets.Clear();
 
-            return base.ContinueLoad();
-        }
-
-        public void Destroy()
-        {
-            foreach (GameMapLayer layer in this.Layers)
-            {
-                layer.Destroy();
-            }
-
-            this.Layers.Clear();
+            return base.DoContinueLoad(phase);
         }
 
         // -------------------------------------------------------------------

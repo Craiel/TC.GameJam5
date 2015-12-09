@@ -1,5 +1,4 @@
-﻿using Tiled2Unity;
-namespace Assets.Scripts.Player
+﻿namespace Assets.Scripts.Player
 {
     using Assets.Scripts.Data;
     using Assets.Scripts.Enums;
@@ -7,7 +6,7 @@ namespace Assets.Scripts.Player
     using Assets.Scripts.Gameplay.Map;
     using Assets.Scripts.InputSystem;
 
-    using CarbonCore.Utils.Unity.Data;
+    using CarbonCore.Utils.MathUtils;
 
     using UnityEngine;
 

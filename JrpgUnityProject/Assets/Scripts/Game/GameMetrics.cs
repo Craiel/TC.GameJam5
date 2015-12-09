@@ -2,8 +2,8 @@
 {
     using Assets.Scripts.Enums;
 
-    using CarbonCore.Utils.Compat.Diagnostics;
-    using CarbonCore.Utils.Compat.Diagnostics.Metrics;
+    using CarbonCore.Utils.Diagnostics;
+    using CarbonCore.Utils.Diagnostics.Metrics;
 
     public static class GameMetrics
     {

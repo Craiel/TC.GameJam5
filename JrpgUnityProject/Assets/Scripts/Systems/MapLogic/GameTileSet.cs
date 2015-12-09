@@ -1,8 +1,10 @@
 ﻿namespace Assets.Scripts.Systems.MapLogic
 {
-    using CarbonCore.ContentServices.Compat.Data.Tiled;
+    using CarbonCore.ContentServices.Data.Tiled;
+    using CarbonCore.Utils.MathUtils;
     using CarbonCore.Utils.Unity.Data;
     using CarbonCore.Utils.Unity.Logic;
+    using CarbonCore.Utils.Unity.Logic.Enums;
     using CarbonCore.Utils.Unity.Logic.Resource;
 
     using UnityEngine;
@@ -56,7 +58,16 @@
             return new GameTileSet(source);
         }
 
-        public override bool ContinueLoad()
+        public void Destroy()
+        {
+            // Clear out the texture
+            this.Texture = null;
+        }
+
+        // -------------------------------------------------------------------
+        // Protected
+        // -------------------------------------------------------------------
+        protected override bool DoContinueLoad(DelayedLoadedObjectPhase phase)
         {
             // Load the actual texture for the tileset
             using (var resource = ResourceProvider.Instance.AcquireOrLoadResource<Texture2D>(this.tilesetResourceKey))
@@ -64,13 +75,7 @@
                 this.Texture = resource.Data;
             }
 
-            return base.ContinueLoad();
-        }
-
-        public void Destroy()
-        {
-            // Clear out the texture
-            this.Texture = null;
+            return base.DoContinueLoad(phase);
         }
     }
 }
