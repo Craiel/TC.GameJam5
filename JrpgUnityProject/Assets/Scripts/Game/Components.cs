@@ -11,9 +11,7 @@
     public class Components : UnitySingleton<Components>
     {
         private readonly IList<GameComponent> dynamicComponents;
-
-        private bool isInitialized;
-
+        
         // -------------------------------------------------------------------
         // Constructor
         // -------------------------------------------------------------------
@@ -36,13 +34,13 @@
 
         public MapSystem Map { get; private set; }
 
-        public void Initialize()
+        public override void Initialize()
         {
+            base.Initialize();
+
             this.Audio.Initialize();
             this.Player.Initialize();
             this.Map.Initialize();
-
-            this.isInitialized = true;
         }
 
         public bool ContinueLoad()
@@ -67,7 +65,7 @@
 
         public void Update()
         {
-            if (!this.isInitialized)
+            if (!this.IsInitialized)
             {
                 return;
             }

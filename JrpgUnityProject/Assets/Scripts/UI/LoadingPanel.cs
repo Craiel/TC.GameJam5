@@ -73,7 +73,7 @@
             ResourceLoadRequest resourceRequest = ResourceProvider.Instance.RequestPool.GetFirstActiveRequest();
             if (resourceRequest != null)
             {
-                string text = string.Format(LoadingDetailedTextFormat, pendingCount, resourceRequest.Key, ResourceProvider.Instance.RequestPool.ActiveRequestCount);
+                string text = string.Format(LoadingDetailedTextFormat, pendingCount, resourceRequest.Info.Key, ResourceProvider.Instance.RequestPool.ActiveRequestCount);
                 this.ProgressDetailText.text = text;
             }
             else if (BundleProvider.Instance.CurrentRequest != null)
