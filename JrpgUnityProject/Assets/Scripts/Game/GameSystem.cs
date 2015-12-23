@@ -56,8 +56,6 @@
         public GameSystem()
         {
             this.scenes = new Dictionary<GameSceneType, IGameScene>();
-
-            this.Load();
         }
 
         // -------------------------------------------------------------------
@@ -80,17 +78,31 @@
             }
         }
 
-        public void Initialize(GameInit init)
+        public void SetInit(GameInit init)
         {
-            Diagnostic.Info("Starting GameSystem!");
-
             this.gameUI = init.UI;
 
             this.DefaultSceneGameData = init.SceneGameData;
+        }
 
+        public override void Initialize()
+        {
+            base.Initialize();
+
+            // Initialize Engine first
+            CarbonEngine.InstantiateAndInitialize();
+            CarbonEngine.Instance.InitializeLog<GameLog>();
+            
             // Initialize all components
-            InputHandler.Instance.Initialize();
-            Components.Instance.Initialize();
+            SceneController.InstantiateAndInitialize();
+            InputHandler.InstantiateAndInitialize();
+            Components.InstantiateAndInitialize();
+
+            // Register the components in the controller
+            SceneController.Instance.RegisterObjectAsRoot(SceneRootCategory.System, CarbonEngine.Instance.gameObject, true);
+            this.RegisterInController(SceneController.Instance, SceneRootCategory.System, true);
+            
+            this.LoadPermanentResources();
         }
 
         public void Transition(GameSceneType type, params object[] data)
@@ -117,14 +129,7 @@
 
             this.LoadScene(type);
         }
-
-        public override void Awake()
-        {
-            this.RegisterInController(SceneController.Instance, SceneRootCategory.System, true);
-
-            base.Awake();
-        }
-
+        
         public void Update()
         {
             if (this.transitioning)
@@ -333,24 +338,7 @@
                     }
             }
         }
-
-        private void Load()
-        {
-            // Create the log
-            UnityDebugTraceListener.Setup();
-
-            Diagnostic.SetInstance(new CarbonDiagnostics<GameLog, MetricProvider>());
-            Diagnostic.RegisterThread(this.GetType().Name);
-
-            Diagnostic.Info("Initializing GameSystem");
-
-            JsonExtensions.RegisterGlobalConverter<Vector3, Vector3ConverterSmall>();
-            JsonExtensions.RegisterGlobalConverter<Quaternion, QuaternionConverterSmall>();
-            JsonExtensions.RegisterGlobalConverter<Color, ColorConverter>();
-
-            this.LoadPermanentResources();
-        }
-
+        
         private void LoadPermanentResources()
         {
             MetricTime measure = Diagnostic.BeginTimeMeasure();

@@ -1,6 +1,7 @@
 ﻿namespace Assets.Scripts.Gameplay.Combat
 {
     using Assets.Scripts.Actors;
+    using Assets.Scripts.Data;
 
     using CarbonCore.Utils.Unity.Logic.Resource;
 
@@ -16,9 +17,11 @@
             // Set up the prefab in scene and all that crap
 
             // instantiate prefab
-            using (var resource = ResourceProvider.Instance.AcquireResource<GameObject>(actor.PrefabKey))
+            using (var resource = ResourceProvider.Instance.AcquireOrLoadResource<GameObject>(actor.PrefabKey))
             {
                 GameObject instance = Instantiate(resource.Data);
+                instance.transform.localScale = new Vector3(1,1,1);
+                instance.transform.parent = this.transform;
                 //set the animator and set its default state to faceing left
                 this.animator = instance.GetComponent<Animator>();
                 this.animator.SetTrigger("Left");

@@ -29,11 +29,13 @@
             using (var resource = ResourceProvider.Instance.AcquireResource<GameObject>(this.PrefabKey))
             {
                 GameObject instance = Object.Instantiate(resource.Data);
-                
             }
         }
+<<<<<<< HEAD
 
         
         
+=======
+>>>>>>> 9fef471e4d4678cc1c74baf16c6ac82a74f9c251
     }
 }

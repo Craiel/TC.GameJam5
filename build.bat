@@ -1,8 +1,7 @@
 @echo off
 
-echo.
-echo -----------------------
-echo Building
-echo.
+set MSBUILD="C:\Program Files (x86)\MSBuild\14.0\Bin"
 
-"Build\Release\CrystalBuild.exe" -p buildConfig.json
+cls
+%MSBUILD%\msbuild.exe "Jrpg.sln" /p:configuration=Unity
+pause

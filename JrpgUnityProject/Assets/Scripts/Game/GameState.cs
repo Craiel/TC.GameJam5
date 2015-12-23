@@ -3,6 +3,7 @@
     using System.Collections.Generic;
 
     using Assets.Scripts.Actors;
+    using Assets.Scripts.Data;
     using Assets.Scripts.Systems;
 
     public static class GameState

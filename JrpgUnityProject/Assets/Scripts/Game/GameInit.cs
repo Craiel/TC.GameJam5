@@ -30,7 +30,9 @@
 
         public void Awake()
         {
-            GameSystem.Instance.Initialize(this);
+            GameSystem.Instantiate();
+            GameSystem.Instance.SetInit(this);
+            GameSystem.Instance.Initialize();
             GameSystem.Instance.Transition(this.StartupScene);
         }
     }
