@@ -32,9 +32,10 @@
         public void Awake()
         {
             ResourceProvider.Instance.RegisterResource(AssetResourceKeys.Character1AssetKey);
-            CharacterActor charactorTest = new CharacterActor(0, AssetResourceKeys.Character1AssetKey, AssetResourceKeys.Character1AssetKey, AssetResourceKeys.Character1AssetKey);
-            this.characterList = new List<CharacterActor>();
-            this.characterList.Add(charactorTest);
+            // CharacterActor charactorTest = new CharacterActor(0, AssetResourceKeys.Character1AssetKey, AssetResourceKeys.Character1AssetKey, AssetResourceKeys.Character1AssetKey);
+            CharacterActor charactorTest = new CharacterActor();
+            charactorTest.Initialize(0, AssetResourceKeys.Character1AssetKey, AssetResourceKeys.Character1AssetKey, AssetResourceKeys.Character1AssetKey);
+            this.characterList = new List<CharacterActor> {charactorTest};
             var a = this.characterList.Count;
         }
 
@@ -50,15 +51,6 @@
                 
             }
 
-            //for (int i = 0; i < this.monsterList.Count; i++)
-            //{
-            //    CombatSlot monsterSlot = this.monsters[i];
-            //    if (monsterSlot != null)
-            //    {
-            //        this.monsters[i].Initialize(this.monsterList[i]);
-            //    }
-                
-            //}
         }
 
         public void Update()

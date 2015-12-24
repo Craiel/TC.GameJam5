@@ -34,5 +34,10 @@
         public void Initialize(MonsterActor actor)
         {
         }
+
+        public void AttackMelee()
+        {
+            
+        }
     }
 }

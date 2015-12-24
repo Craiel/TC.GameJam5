@@ -7,8 +7,7 @@
     {
         public Vector2I MapPosition { get; private set; }
 
-        public WorldActor(int id, ResourceKey prefabKey, ResourceKey spriteKey, ResourceKey portraitKey)
-            : base(id, prefabKey, spriteKey, portraitKey)
+        public WorldActor()
         {
         }
     }

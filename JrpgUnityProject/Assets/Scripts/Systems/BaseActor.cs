@@ -9,17 +9,6 @@
     public abstract class BaseActor
     {
         // -------------------------------------------------------------------
-        // Constructor
-        // -------------------------------------------------------------------
-        protected BaseActor(int id, ResourceKey prefabKey, ResourceKey spriteKey, ResourceKey portraitKey)
-        {
-            this.ActorID = id;
-            this.PrefabKey = prefabKey;
-            this.SpriteKey = spriteKey;
-            this.PortraitKey = portraitKey;
-        }
-
-        // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
         public int ActorID { get; private set; }
@@ -29,12 +18,16 @@
         public bool IsInitialized { get; private set; }
         public ActorType ActorType { get; private set; }
 
-        public virtual void Initialize()
+        public virtual void Initialize(int id, ResourceKey prefabKey, ResourceKey spriteKey, ResourceKey portraitKey)
         {
             if (this.IsInitialized)
             {
                 throw new InvalidOperationException(string.Format("Component {0} was already initialized", this.GetType().Name));
             }
+            this.ActorID = id;
+            this.PrefabKey = prefabKey;
+            this.SpriteKey = spriteKey;
+            this.PortraitKey = portraitKey;
 
             this.IsInitialized = true;
         }

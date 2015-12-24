@@ -9,10 +9,5 @@
     {
         public ShopType ShopType { get; private set; }
         public string ShopName { get; private set; }
-
-        public NPCActor(int id, ResourceKey prefabKey, ResourceKey spriteKey, ResourceKey portraitKey)
-            : base(id, prefabKey, spriteKey, portraitKey)
-        {
-        }
     }
 }

@@ -12,24 +12,10 @@
 
     public class CharacterActor : CombatActor
     {
-        public CharacterActor(int id, ResourceKey prefabKey, ResourceKey spriteKey, ResourceKey portraitKey)
-            : base(id, prefabKey, spriteKey, portraitKey)
-        {
-        }
-
         private Animator characterAnimator;
 
         // -------------------------------------------------------------------
         // Public
         // -------------------------------------------------------------------
-        public override void Initialize()
-        {
-            base.Initialize();
-
-            using (var resource = ResourceProvider.Instance.AcquireResource<GameObject>(this.PrefabKey))
-            {
-                GameObject instance = Object.Instantiate(resource.Data);
-            }
-        }
     }
 }

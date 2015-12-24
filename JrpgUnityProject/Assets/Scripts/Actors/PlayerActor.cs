@@ -7,10 +7,5 @@
     public class PlayerActor : WorldActor
     {
         public string Status { get; private set; }
-
-        public PlayerActor(int id, ResourceKey prefabKey, ResourceKey spriteKey, ResourceKey portraitKey)
-            : base(id, prefabKey, spriteKey, portraitKey)
-        {
-        }
     }
 }

@@ -13,8 +13,7 @@
         public CombatInput CombatInput { get; private set; }
         public CombatState CombatState { get; set; }
 
-        public CombatActor(int id, ResourceKey prefabKey, ResourceKey spriteKey, ResourceKey portraitKey)
-            : base(id, prefabKey, spriteKey, portraitKey)
+        public CombatActor()
         {
             // initialize combat state
             this.CombatState = CombatState.Waiting;

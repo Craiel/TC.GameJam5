@@ -6,8 +6,7 @@
 
     public class BaseMonsterActor : CombatActor
     {
-        public BaseMonsterActor(int id, ResourceKey prefabKey, ResourceKey spriteKey, ResourceKey portraitKey)
-            : base(id, prefabKey, spriteKey, portraitKey)
+        public BaseMonsterActor()
         {
         }
     }

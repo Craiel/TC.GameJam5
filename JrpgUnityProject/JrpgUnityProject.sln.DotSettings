@@ -1,6 +1,11 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=F48E96FF6A70CE47A247CD4BFCF9A922/AbsolutePath/@EntryValue">D:\Dev\TC.GameJam5\Jrpg.sln.DotSettings</s:String>
-	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=F48E96FF6A70CE47A247CD4BFCF9A922/RelativePath/@EntryValue">..\..\Jrpg.sln.DotSettings</s:String>
-	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=F48E96FF6A70CE47A247CD4BFCF9A922/@KeyIndexDefined">True</s:Boolean>
-	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileF48E96FF6A70CE47A247CD4BFCF9A922/@KeyIndexDefined">True</s:Boolean>
-	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileF48E96FF6A70CE47A247CD4BFCF9A922/RelativePriority/@EntryValue">1</s:Double></wpf:ResourceDictionary>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=C2593005F82A49468D2A7D8B9E8A531C/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=C2593005F82A49468D2A7D8B9E8A531C/AbsolutePath/@EntryValue">E:\CarbonCore\CarbonCore.sln.DotSettings</s:String>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=C2593005F82A49468D2A7D8B9E8A531C/RelativePath/@EntryValue">..\..\..\CarbonCore\CarbonCore.sln.DotSettings</s:String>
+	
+	
+	
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileC2593005F82A49468D2A7D8B9E8A531C/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileC2593005F82A49468D2A7D8B9E8A531C/RelativePriority/@EntryValue">2</s:Double>
+	
+	</wpf:ResourceDictionary>
